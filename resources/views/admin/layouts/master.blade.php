@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    @include('layouts.admin._head')
+    @include('admin.include._head')
 </head>
 
 
@@ -12,15 +12,14 @@
 
     <!-- Top Bar Start -->
     <div class="topbar">
-        @include('layouts.admin._topNav')
+        @include('admin.include._topNav')
     </div>
     <!-- Top Bar End -->
-
 
     <!-- ========== Left Sidebar Start ========== -->
 
     <div class="left side-menu">
-        @include('layouts.admin._leftNav')
+        @include('admin.include._leftNav')
     </div>
     <!-- Left Sidebar End -->
 
@@ -36,7 +35,7 @@
         </div> <!-- content -->
 
         <footer class="footer">
-            @include('layouts.admin._footer')
+            @include('admin.include._footer')
         </footer>
 
     </div>
@@ -45,7 +44,7 @@
 </div>
 <!-- END wrapper -->
 
-@include('layouts.admin._script')
+@include('admin.include._script')
 
 </body>
 </html>
