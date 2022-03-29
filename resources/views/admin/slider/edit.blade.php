@@ -20,7 +20,7 @@
             <div class="panel panel-primary">
                 <div class="panel-heading"><h3 class="panel-title">Slider Form</h3></div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="{{route('slider.update', $slider->id)}}" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" action="{{route('admin.slider.update', $slider->id)}}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('put')
                         <div class="form-group">

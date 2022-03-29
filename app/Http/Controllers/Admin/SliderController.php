@@ -43,8 +43,7 @@ class SliderController extends Controller
         $slider->title = $request->input('title');
         $slider->description = $request->input('description');
         $slider->status = $request->input('status');
-        // $slider->course = $request->input('course');
-        // $slider->section = $request->input('section');
+
 
 
         if($request->hasfile('image'))
@@ -60,15 +59,12 @@ class SliderController extends Controller
             'title'=>'required',
             'description'=>'required',
             'status'=>'required|in:'.Slider::ACTIVE_STATUS.','.Slider::INACTIVE_STATUS,
-            // 'course'=>'required',
-            // 'section'=>'required',
             // 'image' => 'required|image|mimes:jpeg,png,jpg,JPEG,PNG,JPG|max:2048',
         ]);
 
         $slider->save();
-        session()->flash('success', 'slider added successfully');
-        return back();
-        // return back()->with('status', 'slider added successfully');
+        session()->flash('success', 'Slider Updated Successfully');
+        return redirect()->route('admin.slider.index');
     }
 
     /**
@@ -90,7 +86,8 @@ class SliderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $slider = Slider::findOrFail($id);
+        return view('admin.slider.edit', compact('slider'));
     }
 
     /**
@@ -102,7 +99,32 @@ class SliderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $slider = Slider::findOrFail($id);
+        $slider->title = $request->input('title');
+        $slider->description = $request->input('description');
+        $slider->status = $request->input('status');
+
+
+
+        if($request->hasfile('image'))
+        {
+            $file = $request->file('image');
+            $path ='images/slider';
+            $file_name = time() . $file->getClientOriginalName();
+            $file->move($path, $file_name);
+            $slider['image']= $path.'/'. $file_name;
+        }
+
+        $request->validate([
+            'title'=>'required',
+            'description'=>'required',
+            'status'=>'required|in:'.Slider::ACTIVE_STATUS.','.Slider::INACTIVE_STATUS,
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,JPEG,PNG,JPG|max:2048',
+        ]);
+
+        $slider->save();
+        session()->flash('success', 'Slider Updated Successfully');
+        return redirect()->route('admin.slider.index');
     }
 
     /**
