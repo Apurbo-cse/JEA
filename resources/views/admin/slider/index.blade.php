@@ -1,4 +1,4 @@
-@extends('layouts.admin.master')
+@extends('admin.layouts.master')
 @section('title', 'slider List')
 @section('table_css')
     <!-- DataTables -->
@@ -17,8 +17,8 @@
             <div class="page-header-title">
                 <h4 class="pull-left page-title">Slider</h4>
                 <ol class="breadcrumb pull-right">
-                    <li><a href="{{route('dashboard')}}">Dashboard</a></li>
-                    <li><a href="{{route('slider.create')}}">Slider Create</a></li>
+                    <li><a href="">Dashboard</a></li>
+                    <li><a href="{{route('admin.slider.create')}}">Slider Create</a></li>
                     <li class="active">Slider List</li>
                 </ol>
                 <div class="clearfix"></div>
@@ -32,7 +32,7 @@
                     <h3 class="panel-title">Slider List</h3>
                 </div>
                 <div class="panel-body">
-               
+
 
                     <table id="datatable-buttons" class="table table-striped table-bordered text-center">
                         <thead>
@@ -45,18 +45,18 @@
                             <th class="text-center" style="width: 12%">Actions</th>
                         </tr>
                         </thead>
-                        
+
                         <tbody>
                         @foreach($sliders as $slider)
                             <tr>
-                                <td>{{$serial++ }}</td>
+                                <td>{{$slider->id}}</td>
                                 <td>{{$slider->title}}</td>
                                 <td>{{$slider->description}}</td>
                                 <td>{{ucfirst($slider->status)}}</td>
                                 <td class="text-center"><img src="{{ asset($slider->image) }}"  width="20%" alt=""></td>
                                 <td class="d-flex">
-                                    <a class="btn btn-info d-inline-block" href="{{ route('slider.edit',$slider->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a>
-                                    <form class="d-inline-block pull-right" method="post" action="{{ route('slider.destroy',$slider->id) }}">
+                                    <a class="btn btn-info d-inline-block" href="{{ route('admin.slider.edit',$slider->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                    <form class="d-inline-block pull-right" method="post" action="{{ route('admin.slider.destroy',$slider->id) }}">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger" onclick="return confirm('Are you confirm to delete?')"><i class="fa fa-trash" aria-hidden="true"></i></button>

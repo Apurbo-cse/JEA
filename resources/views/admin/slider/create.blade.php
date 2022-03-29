@@ -1,4 +1,4 @@
-@extends('layouts.admin.master')
+@extends('admin.layouts.master')
 @section('title', 'Create New Slider')
 @section('content')
     <!-- Page-Title -->
@@ -7,8 +7,8 @@
             <div class="page-header-title">
                 <h4 class="pull-left page-title">Create New Slider</h4>
                 <ol class="breadcrumb pull-right">
-                    <li><a href="{{route('dashboard')}}">Dashboard</a></li>
-                    <li><a href="{{route('slider.index')}}">Slider List</a></li>
+                    <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
+                    <li><a href="{{route('admin.slider.index')}}">Slider List</a></li>
                     <li class="active">Create Slider</li>
                 </ol>
                 <div class="clearfix"></div>
@@ -20,7 +20,7 @@
             <div class="panel panel-primary">
                 <div class="panel-heading"><h3 class="panel-title">Slider Form</h3></div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="{{route('slider.store')}}" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" action="{{route('admin.slider.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label class="col-md-2 control-label">Title</label>

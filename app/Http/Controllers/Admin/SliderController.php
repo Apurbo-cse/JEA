@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
-class SliderControlle extends Controller
+use App\Models\Slider;
+class SliderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,10 @@ class SliderControlle extends Controller
      */
     public function index()
     {
-        //
+
+        $sliders = Slider::orderBy('created_at', 'DESC')->paginate(20);
+        return view('admin.slider.index',compact('sliders'));
+
     }
 
     /**
@@ -24,7 +27,7 @@ class SliderControlle extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.slider.create');
     }
 
     /**
@@ -35,7 +38,37 @@ class SliderControlle extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $slider =new Slider();
+        $slider->title = $request->input('title');
+        $slider->description = $request->input('description');
+        $slider->status = $request->input('status');
+        // $slider->course = $request->input('course');
+        // $slider->section = $request->input('section');
+
+
+        if($request->hasfile('image'))
+        {
+            $file = $request->file('image');
+            $path ='images/slider';
+            $file_name = time() . $file->getClientOriginalName();
+            $file->move($path, $file_name);
+            $slider['image']= $path.'/'. $file_name;
+        }
+
+        $request->validate([
+            'title'=>'required',
+            'description'=>'required',
+            'status'=>'required|in:'.Slider::ACTIVE_STATUS.','.Slider::INACTIVE_STATUS,
+            // 'course'=>'required',
+            // 'section'=>'required',
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,JPEG,PNG,JPG|max:2048',
+        ]);
+
+        $slider->save();
+        session()->flash('success', 'slider added successfully');
+        return back();
+        // return back()->with('status', 'slider added successfully');
     }
 
     /**

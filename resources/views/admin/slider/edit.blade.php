@@ -1,4 +1,4 @@
-@extends('layouts.admin.master')
+@extends('admin.layouts.master')
 @section('title', 'Update Slider')
 @section('content')
     <!-- Page-Title -->
@@ -7,8 +7,8 @@
             <div class="page-header-title">
                 <h4 class="pull-left page-title">Update Slider</h4>
                 <ol class="breadcrumb pull-right">
-                    <li><a href="{{route('dashboard')}}">Dashboard</a></li>
-                    <li><a href="{{route('slider.index')}}">Slider List</a></li>
+                    <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
+                    <li><a href="{{route('admin.slider.index')}}">Slider List</a></li>
                     <li class="active">Update Slider</li>
                 </ol>
                 <div class="clearfix"></div>

@@ -39,8 +39,9 @@
             <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-sliders"></i> <span>Slider</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
                 <ul class="list-unstyled">
-                    {{-- <li><a href="{{route('slider.index')}}">Slider List</a></li>
-                    <li><a href="{{route('slider.create')}}">Create New Slider</a></li> --}}
+                    <li><a href="{{ route ('admin.slider.index') }}">Slider List</a></li>
+                    <li><a href="{{ route('admin.slider.create') }}">Create New Slider</a></li>
+                    {{-- {{ route('admin.category.index') }} --}}
                 </ul>
             </li>
             <li class="has_sub">
