@@ -6,7 +6,7 @@
         </div>
         <div class="user-info">
             <div class="dropdown">
-                <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{ Auth::guard('admin')->user()->name }}</a>
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
             </div>
 
             <p class="text-muted m-0"><i class="fa fa-dot-circle-o text-success"></i> Online</p>
@@ -16,7 +16,7 @@
     <div id="sidebar-menu">
         <ul>
             <li>
-                <a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span> Dashboard </span></a>
+                <a href="#" class="waves-effect"><i class="ti-home"></i><span> Dashboard </span></a>
             </li>
 
 

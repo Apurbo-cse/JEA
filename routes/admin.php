@@ -13,7 +13,7 @@ use App\Http\Controllers\Admin\CategoryController;
 |
 */
 Route::get('/dashboard', function () {
-    return view('backend.index');
+    return view('admin.home.home');
 })->middleware(['auth'])->name('admin.dashboard');
 
 
