@@ -1,4 +1,4 @@
-@extends('layouts.admin.master')
+@extends('admin.layouts.master')
 @section('title', 'Create Gallery')
 @section('content')
     <!-- Page-Title -->
@@ -14,13 +14,13 @@
             </div>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-sm-12">
             <div class="panel panel-primary">
                 <div class="panel-heading"><h3 class="panel-title">Gallery Form</h3></div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="{{route('gallery.store')}}" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" action="{{route('admin.gallery.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label class="col-md-2 control-label">Gallery Title</label>

@@ -111,6 +111,7 @@
                     {{-- <li><a href="{{route('developer.index')}}">Developer profile</a></li> --}}
                 </ul>
             </li>
+
         </ul>
     </div>
     <div class="clearfix"></div>
