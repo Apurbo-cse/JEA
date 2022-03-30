@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Gallery;
 
 class GalleryController extends Controller
 {
@@ -14,7 +15,8 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+        $galleries = Gallery::orderBy('created_at', 'DESC')->paginate(20);
+        return view('admin.gallery.index',compact('galleries'));
     }
 
     /**
