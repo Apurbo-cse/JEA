@@ -42,7 +42,7 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'user_type' => 'user',
+            'user_type' => '',
             'password' => Hash::make($request->password),
         ]);
 
@@ -52,7 +52,7 @@ class RegisteredUserController extends Controller
 
         if (Auth::user()->user_type == 'admin') {
             return redirect()->intended(RouteServiceProvider::AdminDashboard);
-        }elseif(Auth::user()->user_type == 'user'){
+        }elseif(Auth::user()->user_type == ''){
             return redirect()->intended(RouteServiceProvider::UserDashboard);
         }
     }

@@ -19,7 +19,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     // public const HOME = '/dashboard';
     public const AdminDashboard = 'dashboard';
-    public const UserDashboard = 'user/dashboard';
+    public const UserDashboard = '/';
 
     /**
      * The controller namespace for the application.
@@ -63,3 +63,4 @@ class RouteServiceProvider extends ServiceProvider
         });
     }
 }
+
