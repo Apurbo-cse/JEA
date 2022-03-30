@@ -19,6 +19,9 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
+Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
+
+
 
 
 

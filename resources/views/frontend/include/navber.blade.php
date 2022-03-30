@@ -19,7 +19,7 @@
 <nav id="navigation" class="primary-navigation mobile-menu-wrapper" role="navigation">
     <div id="nav-container">
     <ul id="menu-header-menu" class="menu clearfix">
-        <li><a href="/public" >Home</a></li>
+        <li><a href="{{ url('/') }}" >Home</a></li>
         <li><a href="#">About</a></li>
         <li>
             <div class="dropdown">
@@ -41,7 +41,7 @@
                 </div>
             </div>
         </li>
-        <li><a href="gallery">Gallery</a></li>
+        <li><a href="{{ url('/gallery') }}">Gallery</a></li>
         <li><a href="blog">Blog</a></li>
         <li><a href="contact">Contact</a></li>
 

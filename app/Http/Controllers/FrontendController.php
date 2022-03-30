@@ -12,4 +12,14 @@ class FrontendController extends Controller
         $data['sliders'] = DB::table('sliders')->where('status', 'active')->limit(4)->get();
         return view('frontend.home.index',$data);
     }
+
+
+
+    // Gallery View
+    public function gallery()
+    {
+        $data['galleries'] = DB::table('galleries')->where('status', 'active')->get();
+        return view('frontend.pages.gallery',$data);
+    }
+
 }
