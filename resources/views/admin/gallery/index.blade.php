@@ -1,4 +1,4 @@
-@extends('layouts.admin.master')
+@extends('admin.layouts.master')
 @section('title', 'Gallery List')
 @section('table_css')
     <!-- DataTables -->
@@ -44,7 +44,7 @@
                             <th class="text-center" style="width: 12%">Actions</th>
                         </tr>
                         </thead>
-                        
+
                         <tbody>
                         @foreach($galleries as $gallery)
                             <tr>
@@ -59,8 +59,8 @@
                                     </div>
                                 </td>
                                 <td class="d-flex">
-                                    <a class="btn btn-info d-inline-block" href="{{ route('gallery.edit', $gallery->id) }}">Edit</a>
-                                    <form class="d-inline-block pull-right" method="post" action="{{ route('gallery.destroy', $gallery->id) }}">
+                                    <a class="btn btn-info d-inline-block" href="{{ route('admin.gallery.edit', $gallery->id) }}">Edit</a>
+                                    <form class="d-inline-block pull-right" method="post" action="{{ route('admin.gallery.destroy', $gallery->id) }}">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger" onclick="return confirm('Are you confirm to delete?')">Delete</button>
