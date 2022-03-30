@@ -20,15 +20,15 @@
     <div id="nav-container">
     <ul id="menu-header-menu" class="menu clearfix">
         <li><a href="/public" >Home</a></li>
-        <li><a href="{{route('about')}}">About</a></li>
+        <li><a href="#">About</a></li>
         <li>
             <div class="dropdown">
                 <a class="dropbtn" style="color:black;">Engineer's</a>
                 <div class="dropdown-content">
-                    <a href="{{route('msc')}}">MSc in Engineer</a>
-                    <a href="{{route('bsc')}}">BSc in Engineer</a>
-                    <a href="{{route('diplomabsc')}}">BSc in Engineer (Diploma)</a>
-                    <a href="{{route('diploma')}}">Diploma in Engineer</a>
+                    <a href="msc">MSc in Engineer</a>
+                    <a href="bsc">BSc in Engineer</a>
+                    <a href="diplomabsc">BSc in Engineer (Diploma)</a>
+                    <a href="diploma">Diploma in Engineer</a>
                 </div>
             </div>
         </li>
@@ -36,16 +36,16 @@
             <div class="dropdown">
                 <a class="dropbtn"style="color:black;" >Info</a>
                 <div class="dropdown-content">
-                    <a href="{{route('convening-member')}}">Convening Member</a>
-                    <a href="{{route('developer')}}">Developer Info</a>
+                    <a href="convening-member">Convening Member</a>
+                    <a href="developer">Developer Info</a>
                 </div>
             </div>
         </li>
-        <li><a href="{{route('gallery')}}">Gallery</a></li>
-        <li><a href="{{route('blog')}}">Blog</a></li>
-        <li><a href="{{route('contact')}}">Contact</a></li>
+        <li><a href="gallery">Gallery</a></li>
+        <li><a href="blog">Blog</a></li>
+        <li><a href="contact">Contact</a></li>
 
-       
+
         <!-- Authentication Links -->
         @guest
         <li>
@@ -54,19 +54,20 @@
         <li>
           <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
         </li>
-        
+
         @else
+
         <li>
             <div class="dropdown">
 
-                <a class="dropbtn" style="color:black;"">
+                <a class="dropbtn" style="color:black;">
                   <i class="fa fa-user" aria-hidden="true"></i>
                 </a>
 
                 <div class="dropdown-content">
-                    <a href="{{route('userprofile')}}">My Profile</a>
-                    <a href="{{route('myprofile')}}">Edit Bio</a>
-                    
+                    <a href="userprofile">My Profile</a>
+                    <a href="myprofile">Edit Bio</a>
+
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
                           {{ __('Logout') }}
@@ -79,7 +80,7 @@
             </div>
         </li>
         @endguest
-                
+
     </ul>
 
     <div id="header-user-info-container" class="hidden-to-guest">
@@ -118,8 +119,8 @@
   transform-origin: 0 50%;
 }
 
-.ml11 .line1 { 
-  top: 0; 
+.ml11 .line1 {
+  top: 0;
   left: 0;
 }
 
