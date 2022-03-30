@@ -101,8 +101,8 @@
             <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-image"></i> <span> Gallery </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
                 <ul class="list-unstyled">
-                    {{-- <li><a href="{{route('gallery.index')}}">Gallery List</a></li>
-                    <li><a href="{{route('gallery.create')}}">Create New Gallery</a></li> --}}
+                    <li><a href="{{route('admin.gallery.index')}}">Gallery List</a></li>
+                    <li><a href="{{route('admin.gallery.create')}}">Create New Gallery</a></li>
                 </ul>
             </li>
             <li class="has_sub">
