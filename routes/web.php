@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,20 +14,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
-
-Route::get('user/dashboard', function () {
-    return view('user-dashboard');
-})->middleware(['auth'])->name('user.dashboard');
+Route::get('/', [FrontendController::class, 'index'])->name('index');
 
 
 
+Route::group(['prefix' => '/', 'as' => 'web.', 'middleware' => ['auth']], function () {
+
+    Route::get('/profile', [FrontendController::class, 'index'])->name('index');
+
+});
 
 
 
+
+// Route::get('/profile', function () {
+//     return view('user-dashboard');
+// })->middleware(['auth'])->name('user.dashboard');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
