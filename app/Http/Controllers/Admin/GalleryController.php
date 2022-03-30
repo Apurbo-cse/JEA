@@ -37,7 +37,32 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $gallery =new Gallery();
+        $gallery->title = $request->input('title');
+        $gallery->description = $request->input('description');
+        $gallery->status = $request->input('status');
+
+
+
+        if($request->hasfile('image'))
+        {
+            $file = $request->file('image');
+            $path ='images/gallery';
+            $file_name = time() . $file->getClientOriginalName();
+            $file->move($path, $file_name);
+            $gallery['image']= $path.'/'. $file_name;
+        }
+
+        $request->validate([
+            'title'=>'required',
+            'description'=>'required',
+            'status'=>'required|in:'.Gallery::ACTIVE_STATUS.','.Gallery::INACTIVE_STATUS,
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,JPEG,PNG,JPG|max:2048',
+        ]);
+
+        $gallery->save();
+        session()->flash('success', 'Gallery Created Successfully');
+        return redirect()->route('admin.gallery.index');
     }
 
     /**
@@ -59,7 +84,8 @@ class GalleryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $gallery = Gallery::findOrFail($id);
+        return view('admin.gallery.edit', compact('gallery'));
     }
 
     /**
@@ -71,7 +97,32 @@ class GalleryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $gallery = Gallery::findOrFail($id);
+        $gallery->title = $request->input('title');
+        $gallery->description = $request->input('description');
+        $gallery->status = $request->input('status');
+
+
+
+        if($request->hasfile('image'))
+        {
+            $file = $request->file('image');
+            $path ='images/gallery';
+            $file_name = time() . $file->getClientOriginalName();
+            $file->move($path, $file_name);
+            $gallery['image']= $path.'/'. $file_name;
+        }
+
+        $request->validate([
+            'title'=>'required',
+            'description'=>'required',
+            'status'=>'required|in:'.Gallery::ACTIVE_STATUS.','.Gallery::INACTIVE_STATUS,
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,JPEG,PNG,JPG|max:2048',
+        ]);
+
+        $gallery->save();
+        session()->flash('success', 'Gallery Updated Successfully');
+        return redirect()->route('admin.gallery.index');
     }
 
     /**
@@ -82,6 +133,14 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $gallery = Gallery::findOrFail($id);
+        if($gallery){
+            if(file_exists(($gallery->image))){
+                unlink($gallery->image);
+            }
+            $gallery->delete();
+            session()->flash('success', 'Gallery deleted successfully');
+            return back();
+        }
     }
 }

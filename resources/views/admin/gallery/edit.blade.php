@@ -1,4 +1,4 @@
-@extends('layouts.admin.master')
+@extends('admin.layouts.master')
 @section('title', 'Update Gallery')
 @section('content')
     <!-- Page-Title -->
@@ -19,7 +19,7 @@
             <div class="panel panel-primary">
                 <div class="panel-heading"><h3 class="panel-title">Gallery Form</h3></div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="{{route('gallery.update', $gallery->id)}}" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" action="{{route('admin.gallery.update', $gallery->id)}}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('put')
                         <div class="form-group">

@@ -48,7 +48,7 @@
                         <tbody>
                         @foreach($galleries as $gallery)
                             <tr>
-                                <td>{{$serial++ }}</td>
+                                <td>{{$gallery->id}}</td>
                                 <td>{{$gallery->title}}</td>
                                 <td>{{$gallery->description}}</td>
                                 <td>{{ucfirst($gallery->status)}}</td>
@@ -59,11 +59,11 @@
                                     </div>
                                 </td>
                                 <td class="d-flex">
-                                    <a class="btn btn-info d-inline-block" href="{{ route('admin.gallery.edit', $gallery->id) }}">Edit</a>
+                                    <a class="btn btn-info d-inline-block" href="{{ route('admin.gallery.edit', $gallery->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a>
                                     <form class="d-inline-block pull-right" method="post" action="{{ route('admin.gallery.destroy', $gallery->id) }}">
                                         @csrf
                                         @method('delete')
-                                        <button class="btn btn-danger" onclick="return confirm('Are you confirm to delete?')">Delete</button>
+                                        <button class="btn btn-danger" onclick="return confirm('Are you confirm to delete?')"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                     </form>
                                 </td>
                             </tr>
