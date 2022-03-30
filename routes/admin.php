@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\GalleryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,7 @@ Route::get('/dashboard', function () {
 Route::group(['prefix' => 'dashboard/', 'as' => 'admin.', 'middleware' => ['auth']], function () {
 
     Route::resource('slider', SliderController::class);
+    Route::resource('gallery', GalleryController::class);
     // Route::resource('student', StudentController::class);
 
     Route::group(['prefix' => 'category/', 'as' => 'category.'], function () {
