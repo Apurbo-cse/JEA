@@ -14,8 +14,31 @@ class FrontendController extends Controller
     }
 
 
+    // MSc Engineer View
+    public function msc()
+    {
+        return view('frontend.pages.engineers.msc');
+    }
 
-    // Gallery View
+    // BSC Engineer View
+    public function bsc()
+    {
+        return view('frontend.pages.engineers.bsc');
+    }
+
+    // BSC Diploma Engineer View
+    public function bsc_diploma()
+    {
+        return view('frontend.pages.engineers.bsc_diploma');
+    }
+
+    // Diploma Engineer View
+    public function diploma()
+    {
+        return view('frontend.pages.engineers.diploma');
+    }
+
+    // Gallery Vie
     public function gallery()
     {
         $data['galleries'] = DB::table('galleries')->where('status', 'active')->get();

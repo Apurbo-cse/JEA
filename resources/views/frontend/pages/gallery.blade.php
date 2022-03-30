@@ -3,7 +3,7 @@
 
 @section('content')
 
-<title>JEA - | Gallery |</title>
+<title>JEA - | Gallery </title>
 <link href="{{asset('frontend/css/bus.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/gallery.css')}}" rel="stylesheet">
 

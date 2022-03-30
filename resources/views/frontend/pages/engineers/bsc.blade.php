@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
-<title>JEA - | BSc in Engineering |</title>
+<title>JEA - | BSc in Engineering </title>
 <br><br>
 <!-- /banner_bottom_agile_info -->
 <div class="page-head_agile_info_w3l">

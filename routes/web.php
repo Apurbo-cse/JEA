@@ -19,6 +19,17 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
+
+
+// Engineers View
+Route::group(['prefix'=>'engineers'], function (){
+    Route::get('msc',[FrontendController::class, 'msc'])->name('msc');
+    Route::get('bsc',[FrontendController::class, 'bsc'])->name('bsc');
+    Route::get('bsc-diploma',[FrontendController::class, 'bsc_diploma'])->name('bsc_diploma');
+    Route::get('diploma',[FrontendController::class, 'diploma'])->name('diploma');
+});
+
+
 Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 
 
@@ -26,9 +37,7 @@ Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 
 
 Route::group(['prefix' => '/', 'as' => 'web.', 'middleware' => ['auth']], function () {
-
     Route::get('/profile', [FrontendController::class, 'index'])->name('index');
-
 });
 
 

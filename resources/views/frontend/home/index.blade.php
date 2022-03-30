@@ -2,7 +2,7 @@
 @section('title', 'Joypurhat Engineers Association')
 @section('content')
 <br><br><br>
-<title>JEA - | Joypurhat Engineer's Association |</title>
+<title>JEA - | Joypurhat Engineer's Association </title>
 
 <div class="header-bot">
     <div class="header-bot_inner_wthreeinfo_header_mid">

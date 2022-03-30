@@ -19,16 +19,16 @@
 <nav id="navigation" class="primary-navigation mobile-menu-wrapper" role="navigation">
     <div id="nav-container">
     <ul id="menu-header-menu" class="menu clearfix">
-        <li><a href="{{ url('/') }}" >Home</a></li>
+        <li><a href="{{ route('index') }}" >Home</a></li>
         <li><a href="#">About</a></li>
         <li>
             <div class="dropdown">
                 <a class="dropbtn" style="color:black;">Engineer's</a>
                 <div class="dropdown-content">
-                    <a href="msc">MSc in Engineer</a>
-                    <a href="bsc">BSc in Engineer</a>
-                    <a href="diplomabsc">BSc in Engineer (Diploma)</a>
-                    <a href="diploma">Diploma in Engineer</a>
+                    <a href="{{ route('msc') }}">MSc in Engineer</a>
+                    <a href="{{ route('bsc') }}">BSc in Engineer</a>
+                    <a href="{{ route('bsc_diploma') }}">BSc in Engineer (Diploma)</a>
+                    <a href="{{ route('diploma') }}">Diploma in Engineer</a>
                 </div>
             </div>
         </li>

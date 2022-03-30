@@ -1,6 +1,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Elite Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	<meta name="keywords" content="Elite Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
     Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="{{asset('frontend/service/service.css')}}">
 	<!-- Footer CSS -->
 	<link rel="stylesheet" href="{{asset('frontend/style/footer.css')}}">
-	
+
 
 	 <!-- Carousel -->
 	<link rel="stylesheet" href="{{asset('frontend/ap/css/font-awesome.min.css')}}">
@@ -46,7 +46,7 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{{asset('frontend/css/css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    
+
 
     <!-- Footer CSS -->
     <link rel="stylesheet" href="{{asset('frontend/css/css/footer.css')}}">
@@ -229,7 +229,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 
         <!--=============== SCROLL REVEAL===============-->
         <script src="assets/js/scrollreveal.min.js"></script>
-        
+
         <!--=============== SWIPER JS ===============-->
         <script src="assets/js/swiper-bundle.min.js"></script>
 
@@ -239,7 +239,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 
 
 		<!-- About Sec -->
-		
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="about/css/bootstrap.min.css" >
     <!-- Icon -->
@@ -247,7 +247,7 @@ RIGHT SIDEBAR TOGGLE SECTION
     <!-- Owl carousel -->
     <link rel="stylesheet" href="about/css/owl.carousel.min.css">
     <link rel="stylesheet" href="about/css/owl.theme.css">
-    
+
     <!-- Animate -->
     <link rel="stylesheet" href="about/css/animate.css">
     <!-- Main Style -->
@@ -255,4 +255,3 @@ RIGHT SIDEBAR TOGGLE SECTION
     <!-- Responsive Style -->
     <link rel="stylesheet" href="about/css/responsive.css">
 
-		
