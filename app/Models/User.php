@@ -18,9 +18,36 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+
+        'name','last_name','email','password',
+
+        'phone','user_type',
+
+        'facebook','linkedin',
+
+        'description','image',
+
+        'course_name','course_subject','course_status',
+
+        'job_type','job_designation','job_work',
+
+        'hsc_institute','hsc_status','hsc_passing_year',
+
+        'diploma_institute','diploma_status','diploma_passing_year',
+
+        'bsc_institute','bsc_status','bsc_passing_year',
+
+        'msc_institute','msc_status','msc_passing_year',
+
+        'mba_institute','mba_status','mba_passing_year',
+
+
+        'father_name','mother_name',
+
+        'present_add','permanent_add',
+
+        'nid','religion','blood',
+
     ];
 
     /**
