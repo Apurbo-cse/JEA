@@ -3,14 +3,14 @@
 
 <head>
 
-    @include('layouts.frontend.header')
+    @include('frontend.include.header')
 
 </head>
 
 <body>
 
     <!-- Navber -->
-        @include('layouts.frontend.navber')
+        @include('frontend.include.navber')
 	<!-- Navber End-->
 
     <!-- Content -->
@@ -20,13 +20,13 @@
     <!-- Footer -->
     <div class="footer">
 
-        @include('layouts.frontend.footer')
+        {{-- @include('frontend.include.footer') --}}
 
     </div>
     <!-- Footer End -->
 
     <!-- Script -->
-        @include('layouts.frontend.script')
+        @include('frontend.include.script')
     <!-- Script End -->
 
 </body>
