@@ -20,7 +20,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        return view('frontend.auth.register');
     }
 
     /**
@@ -41,11 +41,10 @@ class RegisteredUserController extends Controller
         ]);
 
 
-        
         $user = User::create([
             'name' => $request->name,
+            'last_name' => $request->last_name,
             'email' => $request->email,
-            // 'phone' => $request->phone,
             'user_type' => '',
             'password' => Hash::make($request->password),
         ]);

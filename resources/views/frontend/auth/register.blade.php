@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JEA - | Login</title>
+    <title>JEA - | Registration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('admin/login/fonts/icomoon/style.css') }}">
@@ -41,19 +41,31 @@
 
                             </div>
 
-                            <form method="POST" action="{{ route('login') }}">
+                            <form method="POST" action="{{ route('register') }}">
                                 @csrf
 
                                 {{-- <input type="hidden" name="_token" value="15Er8f5wd50oq8c8Prva47rag9GhX8X4wr8MsWdH"> --}}
                                 <div class="form-group first mb-2">
+                                    <label for="username">First Name</label>
+                                    <input id="name" type="text" name="name" :value="old('name')" class="form-control LogClass">
+                                </div>
+                                <div class="form-group  mb-2">
+                                    <label for="username">Last Name</label>
+                                    <input id="last_name" type="text" name="last_name" :value="old('last_name')" class="form-control LogClass">
+                                </div>
+                                <div class="form-group  mb-2">
                                     <label for="username">Email</label>
-                                    <input id="email" type="text" name="email" :value="old('email')" class="form-control LogClass" autofocusid="email">
+                                    <input id="email" type="text" name="email"  class="form-control LogClass" >
+                                </div>
+
+                                <div class="form-group  mb-2">
+                                    <label for="password">Password</label>
+                                    <input id="password" type="password" class="form-control LogClass" name="password" autocomplete="new-password" >
                                 </div>
 
                                 <div class="form-group last mb-4">
-                                    <label for="password">Password</label>
-                                    <input id="password" type="password" class="form-control LogClass" name="password" required
-                                        autocomplete="current-password">
+                                    <label for="password">Confirm Password</label>
+                                    <input id="password_confirmation" type="password" class="form-control LogClass" name="password_confirmation" required>
                                 </div>
 
                                 <div class="d-flex mb-5 align-items-center">
