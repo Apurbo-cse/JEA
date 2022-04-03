@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,17 +30,23 @@ Route::group(['prefix'=>'engineers'], function (){
     Route::get('diploma',[FrontendController::class, 'diploma'])->name('diploma');
 });
 
+// Route::group(['prefix'=>'profile'], function (){
+//     Route::get('/my-profile',[FrontendController::class, 'index'])->name('index');
+// });
+
 
 Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 
 
-
+// Route::middleware('auth')->group(function () {
+//     Route::resource('user', UserController::class);
+//  });
 
 
 Route::group(['prefix' => '/', 'as' => 'web.', 'middleware' => ['auth']], function () {
-    Route::get('/profile', [FrontendController::class, 'index'])->name('index');
+    Route::get('/home', [FrontendController::class, 'index'])->name('index');
+    Route::resource('profile', UserController::class);
 });
-
 
 
 

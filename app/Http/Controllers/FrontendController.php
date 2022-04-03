@@ -45,4 +45,10 @@ class FrontendController extends Controller
         return view('frontend.pages.gallery',$data);
     }
 
+    // User Profile
+    // public function profile()
+    // {
+    //     return view('frontend.pages.user.profile');
+    // }
+
 }

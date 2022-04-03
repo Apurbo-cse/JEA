@@ -16,10 +16,14 @@
         font-weight: 600px;
         font-size: 14px;
     }
+    .clearfixX{
+        list-style: none !important;
+    }
+
 </style>
 <nav id="navigation" class="primary-navigation mobile-menu-wrapper" role="navigation">
     <div id="nav-container">
-        <ul id="menu-header-menu" class="menu clearfix">
+        <ul id="menu-header-menu" class="menu clearfixX">
             <li><a href="{{ route('index') }}">Home</a></li>
             <li><a href="#">About</a></li>
             <li>
@@ -42,7 +46,7 @@
                     </div>
                 </div>
             </li>
-            <li><a href="{{ url('/gallery') }}">Gallery</a></li>
+            <li><a href="{{ url('gallery') }}">Gallery</a></li>
             <li><a href="blog">Blog</a></li>
             <li><a href="contact">Contact</a></li>
 
@@ -59,15 +63,14 @@
 
             <li>
                 <div class="dropdown">
-                    <a class="LogInF">
-                        <img src="{{asset('frontend/images/logo.png')}}"
-                                style="width:30px;" />Apurbo
+                    <a class="LogInF mb-3">
+                        <img src="{{asset('frontend/images/logo.png')}}" class="ProImg" />&nbsp;{{ Auth::user()->name }}
                         {{-- <i class="fa fa-user" aria-hidden="true"></i> --}}
                     </a>
 
                     <div class="dropdown-content">
-                        <a href="userprofile">My Profile</a>
-                        <a href="myprofile">Edit Bio</a>
+                        <a href="{{ route('web.profile.index') }}">My Profile</a>
+                        <a href="myprofile">Settings</a>
 
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">

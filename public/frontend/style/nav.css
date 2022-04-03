@@ -159,7 +159,7 @@
         padding-top: 0px;
         /* padding-left: 3px; */
         padding-bottom: 0px;
-        margin-top: 13px;
+        margin-top: 14px;
         margin-left: 10px;
         border-radius: 30px;
         background-color: rgb(255, 255, 255) ;
@@ -168,9 +168,15 @@
         color:black;
         /* border: 1px solid rgb(214, 208, 208); */
         text-transform: none;
-        box-shadow: 2px 1px 5px 2px rgba(41, 49, 51, 0.164);
+        box-shadow: 2px 1px 5px 2px rgba(41, 49, 51, 0.116);
 }
 
+.ProImg{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
     /* ////////////////
      */

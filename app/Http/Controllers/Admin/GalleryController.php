@@ -19,6 +19,8 @@ class GalleryController extends Controller
         return view('admin.gallery.index',compact('galleries'));
     }
 
+    
+
     /**
      * Show the form for creating a new resource.
      *

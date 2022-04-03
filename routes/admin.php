@@ -24,7 +24,7 @@ Route::group(['prefix' => 'dashboard/', 'as' => 'admin.', 'middleware' => ['auth
 
     Route::resource('slider', SliderController::class);
     Route::resource('gallery', GalleryController::class);
-    
+
 
     Route::group(['prefix' => 'category/', 'as' => 'category.'], function () {
         Route::get('/', [CategoryController::class, 'index'])->name('index');

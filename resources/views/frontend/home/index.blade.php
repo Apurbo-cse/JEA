@@ -5,9 +5,9 @@
 <title>JEA - | Joypurhat Engineer's Association </title>
 
 <div class="header-bot">
-    <div class="header-bot_inner_wthreeinfo_header_mid">
+    <div class="header-bot_inner_wthreeinfo_header_mid row">
 
-        <div class="col-md-4 header-middle">
+        <div class="col-md-4 header-middle sm-ms-2">
             <form action="#" method="post">
                 <input type="search" name="search" placeholder="Search here..." required="">
                 <input type="submit" value=" ">
@@ -35,24 +35,25 @@
         <div class="col-md-3 agileits-social top_content">
             <ul class="social-nav model-3d-0 footer-social w3_agile_social">
                 <li><a href="#" class="facebook">
-                        <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-                        <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                        <div class="front"><i class="fab fa-facebook-f" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fab fa-facebook-f" aria-hidden="true"></i></div>
                     </a></li>
                 <li><a href="#" class="instagram">
-                        <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                        <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                        <div class="front"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fab fa-instagram" aria-hidden="true"></i></div>
                     </a></li>
                 <li><a href="#" class="twitter">
-                        <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-                        <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                        <div class="front"><i class="fab fa-twitter" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fab fa-twitter" aria-hidden="true"></i></div>
                     </a></li>
                 <li><a href="#" class="linkedin">
-                        <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-                        <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                        <div class="front"><i class="fab fa-linkedin" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fab fa-linkedin" aria-hidden="true"></i></div>
                     </a></li>
                 <li><a href="mailto:" class="email">
-                        <div class="front"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-                        <div class="back"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+
+                        <div class="front"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fas fa-envelope" aria-hidden="true"></i></div>
                     </a></li>
                 <li><a href="tel:+88" class="cell">
                         <div class="front"><i class="fa fa-phone" aria-hidden="true"></i></div>
