@@ -77,7 +77,7 @@
                     <div class="col-xxl-12">
                         <div class="slide-content">
                             <h4 style="color:white;">We are <span
-                                    style="color:#11414B; font-weight:600;font-size:20px;text-shadow:5px slid white;">JEA</span>
+                                    style="color:#11414B; font-weight:600;font-size:20px;text-shadow CardXS:5px slid white;">JEA</span>
                             </h4>
                             <h1 style="padding:15px;">{{$slider->title}}</h1>
                             <p style="padding:20px;">{{$slider->description}}</p>
@@ -91,175 +91,443 @@
         @endforeach
     </div>
 </section>
-<br><br><br>
-<!-- About Section start -->
-{{-- <div class="container">
-    @foreach($abouths as $abouth)
-    <div class="row">
-        <div class="col-lg-6 col-md-12 col-xs-12 info">
-            <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
-                <div>
-                    <div class="site-heading">
-                        <p class="mb-3">{{$abouth->title}}</p>
-                        <h4 class="sectionn-title">Learn Something {{$abouth->title}}</h4>
-                    </div>
-                    <div class="content">
-                        <p>{{$abouth->description}}</p>
 
-                    </div>
-                </div>
-            </div>
+<section id="card" style="background-color: #fefefe !important;">
+    <div class="container wrapper pt-5 pb-5">
+      <div class="row">
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
+        <div class="card-body py-5">
+          <h4 class="text-center text-white py-5">Flexibility</h4>
+          <p class="text-center text-white content-text py-3" >We are able to quickly adapt to new circumstances as they arise and change our plans to navigate or overcome unanticipated obstacles with a pin point solution-based strategy</p>
         </div>
-        <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
-            <img class="img-fluid" src="{{asset($abouth->image)}}" alt="">
+          </div>
         </div>
+
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card mb-2">
+
+            <img class="img-fluid" src="{{asset('frontend/images/one.png')}}" alt="">
+
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
+        <div class="card-body py-5">
+          <h4 class="text-center text-white">Strong Leaders</h4>
+          <p class="text-center text-white content-text">Our strong leadership encourage, motivate, inspire and challenge our team to produce their best work and connects the team together for better solutions.</p>
+        </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card mb-2">
+
+            <img class="img-fluid" src="{{asset('frontend/images/two.jpg')}}" alt="">
+
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
+        <div class="card-body py-5">
+          <h4 class="text-center text-white">Best Quality</h4>
+          <p class="text-center text-white content-text">We are committed to delivering outstanding, cutting-edge IT solutions that add real value that goes beyond what is expected. Our trustworthy, dedicated and experienced team will go the extra mile to solve your IT issues.</p>
+        </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card mb-2">
+
+            <img class="img-fluid" src="{{asset('frontend/images/three.jpg')}}" alt="">
+
+          </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
+        <div class="card-body py-5">
+          <h4 class="text-center text-white">Client Oriented</h4>
+          <p class="text-center text-white content-text">We strive to provide superior customer service and ensure that every client is completely satisfied with our work. Our client-oriented policy is what makes us top industry player.</p>
+        </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card mb-2">
+
+            <img class="img-fluid" src="{{asset('frontend/images/four.jpeg')}}" alt="">
+
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
+        <div class="card-body py-5">
+          <h4 class="text-center text-white content-text">Rich Experience</h4>
+          <p class="text-center text-white">With 25 years of experience, we are on a mission to exceed your expectations and form a long-term, mutually beneficial relationship with ours clients.</p>
+        </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-@endforeach --}}
-</div>
-<!-- About Section End -->
-<br>
+  </section>
 
-<!--NOSSOS SERVICOS-->
-<div id="servicos" class="block">
-    <div class="container">
-        <div class="section-header text-center">
-            <h2 class="sectionn-title wow fadeInDown" data-wow-delay="0.3s">Our Service</h2>
-            <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
-                <a href="#" class="destaque">
-                    <div class="img-container mb-3">
-                        <img src="{{asset('frontend/service/destaque1.svg')}}" class="img-fluid" />
-                    </div>
-                    <h5 class="text-uppercase">Et sumi kapo</h5>
-                    <p class="mb-0">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium
-                    </p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
-                <a href="#" class="destaque">
-                    <div class="img-container mb-3">
-                        <img src="{{asset('frontend/service/destaque2.svg')}}" class="img-fluid" />
-                    </div>
-                    <h5 class="text-uppercase">Lorem Ipsun</h5>
-                    <p class="mb-0">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium
-                    </p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
-                <a href="#" class="destaque">
-                    <div class="img-container mb-3">
-                        <img src="{{asset('frontend/service/destaque3.svg')}}" class="img-fluid" />
-                    </div>
-                    <h5 class="text-uppercase">Malarum Tor</h5>
-                    <p class="mb-0">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium
-                    </p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
-                <a href="#" class="destaque">
-                    <div class="img-container mb-3">
-                        <img src="{{asset('frontend/service/destaque4.svg')}}" class="img-fluid" />
-                    </div>
-                    <h5 class="text-uppercase">Aondeai Pocus</h5>
-                    <p class="mb-0">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium
-                    </p>
-                </a>
-            </div>
-        </div>
+<!-- Flip Card Start -->
+<section class="Modules about-container">
+
+    <div class="about-right py-2 w-50 fw-bold text-center">
+        <h2>mGES | Modules</h2>
     </div>
-</div>
-<!--//NOSSOS SERVICOS-->
+    <div class="container py-5 ">
+        <div class="row mt-5">
 
-<br><br><br>
-
-<!-- Team Section Start -->
-{{-- <section id="team" class="section-padding bg-gray">
-    <div class="container">
-        <div class="section-header text-center">
-            <h2 class="sectionn-title wow fadeInDown" data-wow-delay="0.3s">Our Service</h2>
-            <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-        </div>
-        <div class="row">
-            @foreach($services as $service)
-            <div class="col-lg-6 col-md-12 col-xs-12">
-                <!-- Team Item Starts -->
-                <div class="team-item wow fadeInRight" data-wow-delay="0.2s">
-
-                    <div class="contetn">
-                        <div class="info-text">
-                            <h3><a href="#">{{$service->title}}</a></h3>
-                            <p>{{$service->sub_title}}</p>
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">1</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">Employer</p>
+                            </div>
                         </div>
-                        <p>{{$service->description}}</p>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">Employer</h6>
+                            </div>
+                            <p class="text-center px-1"> Employer can do most of the process except ground handling at
+                                airport and
+                                quarantine</p>
+                        </div>
                     </div>
                 </div>
-                <!-- Team Item Ends -->
             </div>
-            @endforeach
+
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">2</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">EMP Agency (MY)</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">EMP Agency (MY)</h6>
+                            </div>
+                            <p class="text-center px-1">Will act on behalf of their clients (employers) on VDR
+                                application and all
+                                ground handling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">3</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">KDN SSC</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">KDN SSC</h6>
+                            </div>
+                            <p class="text-center px-1">Employers will only able to access the approval once it is
+                                shared by OSC.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">4</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">EMP. Agency (BGD)</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">EMP. Agency (BGD)</h6>
+                            </div>
+                            <p class="text-center px-1">Bangladesh’s licensed agencies will participate. Better
+                                selection and faster
+                                recruitment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">5</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">Attestation</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">Attestation</h6>
+                            </div>
+                            <p class="text-center px-1">Bangladeshi High Commission in Kuala Lumpur will determine the
+                                procedure and
+                                after verification they will generate QR code of the employer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">6</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">Candidates</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">Candidates</h6>
+                            </div>
+                            <p class="text-center px-1">Online interview will assist the employer to select the most
+                                reliable
+                                candidates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">7</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">E-Medical</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">E-Medical</h6>
+                            </div>
+                            <p class="text-center px-1">All registered medical center in Bangladesh will upload the
+                                medical result.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">8</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">Orientation</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">Orientation</h6>
+                            </div>
+                            <p class="text-center px-1">Orientation session and basic knowledge about work & terms for
+                                employees.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">9</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">Immigration</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">Immigration</h6>
+                            </div>
+                            <p class="text-center px-1"> Integrated module for immigration department for calling visa
+                                application,
+                                Sticker, face matching through Artificial Intelligence (AI) and flights.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">10</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">VDR Sticker mGES</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">VDR Sticker mGES</h6>
+                            </div>
+                            <p class="text-center px-1">mGES official counter in Dhaka will handle all candidate's
+                                documents
+                                securely.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">11</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">VDR Sticker High Commission</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">VDR Sticker High Commission</h6>
+                            </div>
+                            <p class="text-center px-1">To ensure safety and data security, only authorized Immigration
+                                officers
+                                will be given the access to mGES data</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">12</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">BMET</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">BMET</h6>
+                            </div>
+                            <p class="text-center px-1">Bangladesh Bureau of Manpower, Employment, and Training (BMET)
+                                will
+                                determine the procedure and the service fees.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 my-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-body ">
+                                <div class="text-center mt-4">
+                                    <h1 class="fw-bold infoText">13</h1>
+                                </div>
+                                <p class="text-center mb-3 infoText">Labor Department</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-center mt-3">
+                                <h6 class="fw-bold ">Labor Department</h6>
+                            </div>
+                            <p class="text-center px-1">Malaysian Labor Department will determine the kind of reports
+                                they require
+                                from the employers and the agencies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-</section> --}}
-<!-- Team Section End -->
 
-<br><br>
+</section>
+<!-- Flip Card End -->
 
 
-<!--/grids-->
-<div class="coupons">
-    <div class="coupons-grids text-center">
-        <div class="w3layouts_mail_grid">
-            <div class="col-md-3 w3layouts_mail_grid_left">
-                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                    <i class="fa fa-truck" aria-hidden="true"></i>
-                </div>
-                <div class="w3layouts_mail_grid_left2">
-                    <h3>FREE SHIPPING</h3>
-                    <p style="text-align: justify;text-justify: inter-word;">Lorem ipsum dolor sit amet, consectetur</p>
+<div class="section">
+    <div class="container">
+        <div class="row cardPro mt-3 mb-3">
+
+            <div class="col-md-4">
+                <div class="card card bg-light shadow CardXS m-2">
+                    <p>name</p>
+                    <p>dsfg sdh fsdlfs adfs</p>
                 </div>
             </div>
-            <div class="col-md-3 w3layouts_mail_grid_left">
-                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                    <i class="fa fa-headphones" aria-hidden="true"></i>
-                </div>
-                <div class="w3layouts_mail_grid_left2">
-                    <h3>24/7 SUPPORT</h3>
-                    <p style="text-align: justify;text-justify: inter-word;">Lorem ipsum dolor sit amet, consectetur</p>
+
+            <div class="col-md-4">
+                <div class="card card bg-light shadow CardXS m-2">
+                    <p>name</p>
+                    <p>dsfg sdh fsdlfs adfs</p>
                 </div>
             </div>
-            <div class="col-md-3 w3layouts_mail_grid_left">
-                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                </div>
-                <div class="w3layouts_mail_grid_left2">
-                    <h3>MONEY BACK GUARANTEE</h3>
-                    <p style="text-align: justify;text-justify: inter-word;">Lorem ipsum dolor sit amet, consectetur</p>
+            <div class="col-md-4">
+                <div class="card card bg-light shadow CardXS m-2">
+                    <p>name</p>
+                    <p>dsfg sdh fsdlfs adfs</p>
                 </div>
             </div>
-            <div class="col-md-3 w3layouts_mail_grid_left">
-                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                    <i class="fa fa-gift" aria-hidden="true"></i>
-                </div>
-                <div class="w3layouts_mail_grid_left2">
-                    <h3>FREE GIFT COUPONS</h3>
-                    <p style="text-align: justify;text-justify: inter-word;">Lorem ipsum dolor sit amet, consectetur</p>
+            <div class="col-md-4">
+                <div class="card card bg-light shadow CardXS m-2">
+                    <p>name</p>
+                    <p>dsfg sdh fsdlfs adfs</p>
                 </div>
             </div>
-            <div class="clearfix"> </div>
+            <div class="col-md-4">
+                <div class="card card bg-light shadow CardXS m-2">
+                    <p>name</p>
+                    <p>dsfg sdh fsdlfs adfs</p>
+                </div>
+            </div>
         </div>
-
     </div>
 </div>
-<!--grids-->
 
 @endsection
