@@ -21,6 +21,8 @@ Route::get('/welcome', function () {
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 
+// About View
+Route::get('about',[FrontendController::class, 'about'])->name('about');
 
 // Engineers View
 Route::group(['prefix'=>'engineers'], function (){

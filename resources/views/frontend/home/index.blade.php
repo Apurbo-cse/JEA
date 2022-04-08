@@ -92,155 +92,176 @@
     </div>
 </section>
 
+
 <section id="card" style="background-color: #fefefe !important;">
     <div class="container wrapper pt-5 pb-5">
-      <div class="row">
-        <div class="col-md-4 d-flex align-items-stretch">
-          <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
-        <div class="card-body py-5">
-          <h4 class="text-center text-white py-5">Flexibility</h4>
-          <p class="text-center text-white content-text py-3" >We are able to quickly adapt to new circumstances as they arise and change our plans to navigate or overcome unanticipated obstacles with a pin point solution-based strategy</p>
+        <div class="row">
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
+                    <div class="card-body py-5">
+                        <h4 class="text-center text-white py-5">Flexibility</h4>
+                        <p class="text-center text-white content-text py-3">We are able to quickly adapt to new
+                            circumstances as they arise and change our plans to navigate or overcome unanticipated
+                            obstacles with a pin point solution-based strategy</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-2">
+
+                    <img class="img-fluid" src="{{asset('frontend/images/one.png')}}" alt="">
+
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
+                    <div class="card-body py-5">
+                        <h4 class="text-center text-white">Strong Leaders</h4>
+                        <p class="text-center text-white content-text">Our strong leadership encourage, motivate,
+                            inspire and challenge our team to produce their best work and connects the team together for
+                            better solutions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-2">
+
+                    <img class="img-fluid" src="{{asset('frontend/images/two.jpg')}}" alt="">
+
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
+                    <div class="card-body py-5">
+                        <h4 class="text-center text-white">Best Quality</h4>
+                        <p class="text-center text-white content-text">We are committed to delivering outstanding,
+                            cutting-edge IT solutions that add real value that goes beyond what is expected. Our
+                            trustworthy, dedicated and experienced team will go the extra mile to solve your IT issues.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-2">
+
+                    <img class="img-fluid" src="{{asset('frontend/images/three.jpg')}}" alt="">
+
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
+                    <div class="card-body py-5">
+                        <h4 class="text-center text-white">Client Oriented</h4>
+                        <p class="text-center text-white content-text">We strive to provide superior customer service
+                            and ensure that every client is completely satisfied with our work. Our client-oriented
+                            policy is what makes us top industry player.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-2">
+
+                    <img class="img-fluid" src="{{asset('frontend/images/four.jpeg')}}" alt="">
+
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
+                    <div class="card-body py-5">
+                        <h4 class="text-center text-white content-text">Rich Experience</h4>
+                        <p class="text-center text-white">With 25 years of experience, we are on a mission to exceed
+                            your expectations and form a long-term, mutually beneficial relationship with ours clients.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 d-flex align-items-stretch">
-          <div class="card mb-2">
-
-            <img class="img-fluid" src="{{asset('frontend/images/one.png')}}" alt="">
-
-          </div>
-        </div>
-
-        <div class="col-md-4 d-flex align-items-stretch">
-          <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
-        <div class="card-body py-5">
-          <h4 class="text-center text-white">Strong Leaders</h4>
-          <p class="text-center text-white content-text">Our strong leadership encourage, motivate, inspire and challenge our team to produce their best work and connects the team together for better solutions.</p>
-        </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-4 d-flex align-items-stretch">
-          <div class="card mb-2">
-
-            <img class="img-fluid" src="{{asset('frontend/images/two.jpg')}}" alt="">
-
-          </div>
-        </div>
-
-        <div class="col-md-4 d-flex align-items-stretch">
-          <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
-        <div class="card-body py-5">
-          <h4 class="text-center text-white">Best Quality</h4>
-          <p class="text-center text-white content-text">We are committed to delivering outstanding, cutting-edge IT solutions that add real value that goes beyond what is expected. Our trustworthy, dedicated and experienced team will go the extra mile to solve your IT issues.</p>
-        </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 d-flex align-items-stretch">
-          <div class="card mb-2">
-
-            <img class="img-fluid" src="{{asset('frontend/images/three.jpg')}}" alt="">
-
-          </div>
-        </div>
-        <div class="col-md-4 d-flex align-items-stretch">
-          <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
-        <div class="card-body py-5">
-          <h4 class="text-center text-white">Client Oriented</h4>
-          <p class="text-center text-white content-text">We strive to provide superior customer service and ensure that every client is completely satisfied with our work. Our client-oriented policy is what makes us top industry player.</p>
-        </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-4 d-flex align-items-stretch">
-          <div class="card mb-2">
-
-            <img class="img-fluid" src="{{asset('frontend/images/four.jpeg')}}" alt="">
-
-          </div>
-        </div>
-
-        <div class="col-md-4 d-flex align-items-stretch">
-          <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
-        <div class="card-body py-5">
-          <h4 class="text-center text-white content-text">Rich Experience</h4>
-          <p class="text-center text-white">With 25 years of experience, we are on a mission to exceed your expectations and form a long-term, mutually beneficial relationship with ours clients.</p>
-        </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-
-  <section id="services" class="my-3">
+<section id="services" class="my-3">
     <div class="services-content wrapper mt-5">
-        <h4 class="text-center">Visa Covid Service</h4>
+        <h4 class="text-center">JEA Service</h4>
         <div class="d-flex justify-content-center align-items-center">
             <div class="line"></div>
         </div>
         <div class="container">
             <p class="text-center mt-3 text-muted">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorem officia fugit, perspiciatis numquam sequi itaque iusto tempora suscipit quae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, provident. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illum esse sit quisquam molestias autem eum aspernatur sed totam, Voluptates esse aperiam magni quasi atque rem enim.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorem officia fugit, perspiciatis
+                numquam sequi itaque iusto tempora suscipit quae?Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Enim, provident. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illum esse
+                sit quisquam molestias autem eum aspernatur sed totam, Voluptates esse aperiam magni quasi atque rem
+                enim.
             </p>
         </div>
     </div>
 
     <div class="container section-margin">
         <div class="row row-cols-1 row-cols-md-4 g-4 pb-2">
-                            <div class="col">
-                    <div class="card h-100 p-3 mx-auto card-width">
-                        <div class=" card-top-img d-flex justify-content-center align-items-center ">
-                            <img src="https://visacovid.xyz/assets/center-part/image/landing/icon1.png" class=" img-fluid card-icon my-3" alt="..." />
-                        </div>
+            <div class="col">
+                <div class="card h-100 p-3 mx-auto card-width">
+                    <div class=" card-top-img d-flex justify-content-center align-items-center ">
+                        <img src="https://visacovid.xyz/assets/center-part/image/landing/icon1.png"
+                            class=" img-fluid card-icon my-3" alt="..." />
+                    </div>
 
-                        <div class="card-body text-center">
-                            <h5 class="card-title mb-3 fw-bold">Vaccine</h5>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,necessitatibus?</p>
-                        </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3 fw-bold">Vaccine</h5>
+                        <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Nam,necessitatibus?</p>
                     </div>
                 </div>
-                            <div class="col">
-                    <div class="card h-100 p-3 mx-auto card-width">
-                        <div class=" card-top-img d-flex justify-content-center align-items-center ">
-                            <img src="https://visacovid.xyz/assets/center-part/image/landing/icon2.png" class=" img-fluid card-icon my-3" alt="..." />
-                        </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 p-3 mx-auto card-width">
+                    <div class=" card-top-img d-flex justify-content-center align-items-center ">
+                        <img src="https://visacovid.xyz/assets/center-part/image/landing/icon2.png"
+                            class=" img-fluid card-icon my-3" alt="..." />
+                    </div>
 
-                        <div class="card-body text-center">
-                            <h5 class="card-title mb-3 fw-bold">Booster</h5>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,necessitatibus?</p>
-                        </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3 fw-bold">Booster</h5>
+                        <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Nam,necessitatibus?</p>
                     </div>
                 </div>
-                            <div class="col">
-                    <div class="card h-100 p-3 mx-auto card-width">
-                        <div class=" card-top-img d-flex justify-content-center align-items-center ">
-                            <img src="https://visacovid.xyz/assets/center-part/image/landing/icon3.png" class=" img-fluid card-icon my-3" alt="..." />
-                        </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 p-3 mx-auto card-width">
+                    <div class=" card-top-img d-flex justify-content-center align-items-center ">
+                        <img src="https://visacovid.xyz/assets/center-part/image/landing/icon3.png"
+                            class=" img-fluid card-icon my-3" alt="..." />
+                    </div>
 
-                        <div class="card-body text-center">
-                            <h5 class="card-title mb-3 fw-bold">PCR</h5>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,necessitatibus?</p>
-                        </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3 fw-bold">PCR</h5>
+                        <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Nam,necessitatibus?</p>
                     </div>
                 </div>
-                            <div class="col">
-                    <div class="card h-100 p-3 mx-auto card-width">
-                        <div class=" card-top-img d-flex justify-content-center align-items-center ">
-                            <img src="https://visacovid.xyz/assets/center-part/image/landing/icon4.png" class=" img-fluid card-icon my-3" alt="..." />
-                        </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 p-3 mx-auto card-width">
+                    <div class=" card-top-img d-flex justify-content-center align-items-center ">
+                        <img src="https://visacovid.xyz/assets/center-part/image/landing/icon4.png"
+                            class=" img-fluid card-icon my-3" alt="..." />
+                    </div>
 
-                        <div class="card-body text-center">
-                            <h5 class="card-title mb-3 fw-bold">Add Country</h5>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,necessitatibus?</p>
-                        </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3 fw-bold">Add Country</h5>
+                        <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Nam,necessitatibus?</p>
                     </div>
                 </div>
-                    </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -558,7 +579,6 @@
 </section>
 <!-- Flip Card End -->
 
-
 <div class="section">
     <div class="container">
         <div class="row cardPro mt-3 mb-3">
@@ -597,41 +617,5 @@
         </div>
     </div>
 </div>
-
-
-
-<style>
-    .line{
-    margin-top: 10px;
-    height: 5px;
-    width: 120px;
-   background-color: #6C63FF;
-   border-radius: 5px;
-}
-.card-icon{
-
-    height: 50pt;
-    width: 50pt;
-
-}
-.card {
-    cursor: pointer;
-    box-shadow: 0 9px 12px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-  }
-
-  .card:hover {
-    box-shadow: 0 12px 18px 0 rgba(0,0,0,0.2);
-    transform:scale(1.05);
-  }
-.card-width{
-    width: 85%;
-}
-.card-icon {
-    height: 50pt;
-    width: 50pt;
-}
-</style>
 
 @endsection

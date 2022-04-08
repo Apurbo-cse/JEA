@@ -13,6 +13,12 @@ class FrontendController extends Controller
         return view('frontend.home.index',$data);
     }
 
+  // Gallery Vie
+  public function about()
+  {
+    //   $data['galleries'] = DB::table('galleries')->where('status', 'active')->get();
+      return view('frontend.pages.about');
+  }
 
     // MSc Engineer View
     public function msc()
