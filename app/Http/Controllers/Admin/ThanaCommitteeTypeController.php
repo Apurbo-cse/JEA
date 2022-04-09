@@ -74,7 +74,8 @@ class ThanaCommitteeTypeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $thana =ThanaCommitteeType::findOrFail($id);
+        return view('admin.pages.thana_type.edit', compact('thana'));
     }
 
     /**
@@ -85,8 +86,24 @@ class ThanaCommitteeTypeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+
+        {$thana = ThanaCommitteeType::findOrFail($id);
+        $thana->thana_type = $request->input('thana_type');
+        $thana->title = $request->input('title');
+        $thana->description = $request->input('description');
+        $thana->source = $request->input('source');
+        $thana->status = $request->input('status');
+
+        $request->validate([
+            'thana_type'=>'required',
+            'description'=>'required',
+            'source'=>'required',
+            'status'=>'required|in:'.ThanaCommitteeType::ACTIVE_STATUS.','.ThanaCommitteeType::INACTIVE_STATUS,
+        ]);
+
+        $thana->save();
+        session()->flash('success', 'thana Created Successfully');
+        return redirect()->route('admin.thana_type.index');
     }
 
     /**
@@ -97,6 +114,14 @@ class ThanaCommitteeTypeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $thana = ThanaCommitteeType::findOrFail($id);
+        if($thana){
+            if(file_exists(($thana->image))){
+                unlink($thana->image);
+            }
+            $thana->delete();
+            session()->flash('success', 'thana deleted successfully');
+            return back();
+        }
     }
 }

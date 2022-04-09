@@ -1,0 +1,30 @@
+.Thana {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 3px #0c0c0c, 0 0 5px #0000FF;
+    font-weight: 600;
+}
+
+.Joyouhat {
+    color: rgb(66, 10, 164);
+    font-weight: 600;
+}
+
+.Enginners {
+    color: rgb(107, 3, 39);
+    font-weight: 600;
+}
+
+.Thak_Border_top {
+    border-top: 2px solid #3e091b;
+}
+
+.date_Thak {
+    float: right;
+}
+
+.ImgThak {
+    width: 140px;
+    height: 150px;
+    /* object-fit: cover; */
+    text-align: center;
+}

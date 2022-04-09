@@ -1,8 +1,11 @@
 @extends('frontend.layouts.master')
-@section('title', 'Joypurhat Engineers Association')
+{{-- @section('title', 'Joypurhat Engineers Association') --}}
+@push('title')
+Joypurhat Engineers Association
+@endpush
+
 @section('content')
 <br><br><br>
-<title>JEA - | Joypurhat Engineer's Association </title>
 
 <div class="header-bot">
     <div class="header-bot_inner_wthreeinfo_header_mid row">

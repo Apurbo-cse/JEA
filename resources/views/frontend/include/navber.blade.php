@@ -48,11 +48,11 @@
                            Thana Committee
                           </a>
                           <div class="collapse" id="collapseExampleq">
-                            <a href="{{ route('joypurhat') }}">Joypurhat</a>
+                            <a href="{{ route('joypurhat') }}">Joypurhat Sadar</a>
                         <a href="{{ route('panchbibi') }}">Panchbibi</a>
                         <a href="{{ route('kalai') }}">Kalai</a>
-                        <a href="{{ route('akkelpur') }}">Akkelpur</a>
                         <a href="{{ route('khetlal') }}">Khetlal</a>
+                        <a href="{{ route('akkelpur') }}">Akkelpur</a>
                         </div>
 
                     </div>

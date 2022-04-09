@@ -2,7 +2,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Elite Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
     Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-
+    <title>JEA - Joypurhat Engineers Association </title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <link rel="shortcut icon" href="{{asset('frontend/images/favicon.ico')}}" type="image/png">
@@ -24,6 +24,9 @@
 
     <!--  FlipCard --->
     <link href="{{asset('frontend/flipcard.css')}}" rel="stylesheet">
+
+     <!--  Thana --->
+     <link href="{{asset('frontend/thana.css')}}" rel="stylesheet">
 
     <!--  Footer --->
     <link href="{{asset('frontend/footer.css')}}" rel="stylesheet">
