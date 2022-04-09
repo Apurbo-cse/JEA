@@ -45,6 +45,20 @@
                 </ul>
             </li>
             <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-sliders"></i> <span>Thana Type</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                <ul class="list-unstyled">
+                    <li><a href="{{ route ('admin.thana_type.index') }}">Thana Type List</a></li>
+                    <li><a href="{{ route('admin.thana_type.create') }}">Create New Type</a></li>
+                </ul>
+            </li>
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-sliders"></i> <span>Thana Committee</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                <ul class="list-unstyled">
+                    <li><a href="{{ route ('admin.thana.index') }}">Thana Committee List</a></li>
+                    <li><a href="{{ route('admin.thana.create') }}">Create New Committee</a></li>
+                </ul>
+            </li>
+            <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-image"></i> <span>Contact</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
                 <ul class="list-unstyled">
                     {{-- <li><a href="{{route('contact.index')}}">Contact List</a></li>

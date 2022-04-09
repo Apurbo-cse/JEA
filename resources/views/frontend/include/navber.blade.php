@@ -43,6 +43,18 @@
                     <div class="dropdown-content">
                         <a href="convening-member">Convening Member</a>
                         <a href="developer">Developer Info</a>
+
+                        <a  data-bs-toggle="collapse" href="#collapseExampleq" role="button" aria-expanded="false" aria-controls="collapseExample">
+                           Thana Committee
+                          </a>
+                          <div class="collapse" id="collapseExampleq">
+                            <a href="{{ route('joypurhat') }}">Joypurhat</a>
+                        <a href="{{ route('panchbibi') }}">Panchbibi</a>
+                        <a href="{{ route('kalai') }}">Kalai</a>
+                        <a href="{{ route('akkelpur') }}">Akkelpur</a>
+                        <a href="{{ route('khetlal') }}">Khetlal</a>
+                        </div>
+
                     </div>
                 </div>
             </li>
@@ -132,6 +144,7 @@
         display: inline-block;
         line-height: 1em;
     }
+
 </style>
 
 <script>

@@ -32,6 +32,15 @@ Route::group(['prefix'=>'engineers'], function (){
     Route::get('diploma',[FrontendController::class, 'diploma'])->name('diploma');
 });
 
+
+// Thana Committee View
+Route::group(['prefix'=>'thana-committee'], function (){
+    Route::get('joypurhat',[FrontendController::class, 'joypurhat'])->name('joypurhat');
+    Route::get('panchbibi',[FrontendController::class, 'panchbibi'])->name('panchbibi');
+    Route::get('kalai',[FrontendController::class, 'kalai'])->name('kalai');
+    Route::get('akkelpur',[FrontendController::class, 'akkelpur'])->name('akkelpur');
+    Route::get('khetlal',[FrontendController::class, 'khetlal'])->name('khetlal');
+});
 // Route::group(['prefix'=>'profile'], function (){
 //     Route::get('/my-profile',[FrontendController::class, 'index'])->name('index');
 // });

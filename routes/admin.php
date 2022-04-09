@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\IntThanaController;
+use App\Http\Controllers\Admin\ThanaCommitteeController;
+use App\Http\Controllers\Admin\ThanaCommitteeTypeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +25,19 @@ Route::get('/dashboard', function () {
 
 
 Route::group(['prefix' => 'dashboard/', 'as' => 'admin.', 'middleware' => ['auth']], function () {
+
+    Route::resource('thana_type', ThanaCommitteeTypeController::class);
+
+    Route::resource('thana', ThanaCommitteeController::class);
+
+    Route::group(['prefix' => 'int-thana/', 'as' => 'int_thana.'], function () {
+        Route::get('joypurhat', [IntThanaController::class, 'joypurhat'])->name('joypurhat');
+        Route::get('panchbibi', [IntThanaController::class, 'panchbibi'])->name('panchbibi');
+        Route::get('kalai', [IntThanaController::class, 'kalai'])->name('kalai');
+        Route::get('khetlal', [IntThanaController::class, 'khetlal'])->name('khetlal');
+        Route::get('akkelpur', [IntThanaController::class, 'akkelpur'])->name('akkelpur');
+
+    });
 
     Route::resource('slider', SliderController::class);
     Route::resource('gallery', GalleryController::class);

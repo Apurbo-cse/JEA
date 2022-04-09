@@ -23,23 +23,13 @@
 </div>
 </div> --}}
 
-    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-      Link with href
-    </a>
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      Button with data-bs-target
-    </button>
-  <div class="collapse" id="collapseExample">
-      joypurhat
-  </div>
-
             <div class="row ">
                 <div class=" d-flex justify-content-center">
                     <div class="header_about">
                         <img src="{{ asset('frontend/images/logo.png') }}" style="width:120px;padding-top:2px;">
                     </div>
                     <div class="header_about mt-4 me-2 fw-bold">
-                        <h4 class="Thana">Khetlal Thana Committee</h4>
+                        <h4 class="Thana">Joypuhat Sadar Thana Committee</h4>
                         <p><span class="Joyouhat">Joypurhat</span> <span class="Enginners">Engineer's
                                 Association</span></p>
                     </div>
@@ -55,38 +45,23 @@
                 </div>
                 <div class="row mt-3">
                     <p class="text-gray text-bold text-gray-100 text-success text-justify">
-                        The following executive members were approved by the Joypurhat Engineers Association in the Khetlal
+                        The following executive members were approved by the Joypurhat Engineers Association in the Joypuhat
                         Thana Committee.
                     </p>
                 </div>
 
-
-
                 <div class="row justify-content-center mt-4 text-center">
-
-                    <div class="col-md-3">
-                        <div class="mt-5 mb-3">
-                            <img src="{{ asset('frontend/images/team/ap.jpeg') }}" class="ImgThak" alt="">
-                            <p>Engr. Apurbo Kumar Anup</p>
-                            <small>Software Engineer</small>
+                    @foreach ($thana_committees as $thana)
+                        <div class="col-md-3">
+                            <div class="mt-5 mb-3">
+                                <img src="{{ asset($thana->image) }}" class="ImgThak" alt="">
+                                <p>Engr. {{ $thana->name }}</p>
+                                <small>Department : {{ $thana->department }}</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mt-5 mb-3">
-                            <img src="{{ asset('frontend/images/team/ap.jpeg') }}" class="ImgThak" alt="">
-                            <p>Engr. Apurbo Kumar Anup</p>
-                            <small>Software Engineer</small>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mt-5 mb-3">
-                            <img src="{{ asset('frontend/images/team/ap.jpeg') }}" class="ImgThak" alt="">
-                            <p>Engr. Apurbo Kumar Anup</p>
-                            <small>Software Engineer</small>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
+
             </div>
 
         </div>
@@ -118,9 +93,10 @@
         .date_Thak {
             float: right;
         }
-        .ImgThak{
+
+        .ImgThak {
             width: 200px;
-            height:250px;
+            height: 250px;
             object-fit: cover;
             text-align: center;
         }
