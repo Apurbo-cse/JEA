@@ -40,8 +40,6 @@
     <link rel="stylesheet" href="{{asset('frontend/ap/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/ap/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/ap/css/style.css')}}">
-    {{-- <link rel="stylesheet" href="{{asset('frontend/ap/css/responsive.css')}}"> --}}
-    {{-- <link rel="stylesheet" href="{{asset('frontend/ap/css/bootstrap.min.css')}}"> --}}
     <link rel="stylesheet" href="{{asset('frontend/ap/css/owl.theme.default.')}}">
 
     <!-- Template Stylesheet -->
@@ -50,6 +48,16 @@
 
     <!-- Footer CSS -->
     {{-- <link rel="stylesheet" href="{{asset('frontend/css/css/footer.css')}}"> --}}
+
+     <!--  Style --->
+     {{-- <link href="{{asset('frontend/style/main.css')}}" rel="stylesheet">
+     <link href="{{asset('frontend/style/most.css')}}" rel="stylesheet"> --}}
+
+
+       <!--  Blog --->
+       <link href="{{asset('frontend/blog.css')}}" rel="stylesheet">
+
+
 
     <!--=============== REMIXICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">

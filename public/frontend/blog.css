@@ -1,0 +1,118 @@
+.main-container {
+    position: static;
+    max-width: 1200px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+.letest-titleB p {
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 9px 15px;
+    width: 128px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: #008080;
+    margin-bottom: 30px;
+}
+
+.sec-newsB p {
+    color: #242424;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 100%;
+    padding-top: 11.25px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+    background-color: #f3f3f3;
+}
+.ImgB{
+    height: 200px;
+    width: 100%;
+    object-fit: fill;
+}
+
+.content-boxB{
+    margin-bottom: 10px;
+}
+
+.content-boxB h3 {
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    color: #474545;
+    line-height: 1.5em;
+    margin-bottom: 0px;
+}
+
+.content-boxB .post-meta {
+    display: inline;
+    margin-bottom: 15px !important;
+}
+
+.content-boxB .post-meta li {
+    display: inline;
+    color: #008080;
+    font-size: 10px;
+    margin-bottom: 10px;
+    padding-right: 5px;
+}
+.text-B{
+    color: #727272;
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: justify;
+}
+.read-moreB {
+    color: #008080 !important;
+}
+.read-moreB:hover {
+    color: #000f80 !important;
+}
+
+.BoderB{
+    border-bottom: 1px solid #00808030;
+
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+
+.search-boxB .form-group input[type="text"],.search-boxB .form-group input[type="search"] {
+    position: relative;
+    line-height: 24px;
+    padding: 10px 50px 10px 20px;
+    border: 2px solid #e0e0e0;
+    background: none;
+    display: block;
+    font-size: 16px;
+    width: 100%;
+    height: 48px;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+
+
+.adds-blockB{
+    height: 150px;
+}
+
+.sidebar-widgetB {
+    position: relative;
+    margin-bottom: 40px;
+}
+/* .adds-blockB .inner-boxB:before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.50);
+} */
