@@ -25,7 +25,7 @@
     <div id="nav-container">
         <ul id="menu-header-menu" class="menu clearfixX">
             <li><a href="{{ route('index') }}">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="{{ route('about') }}">About</a></li>
             <li>
                 <div class="dropdown">
                     <a class="dropbtn" style="color:black;">Engineer's</a>
@@ -58,8 +58,8 @@
                     </div>
                 </div>
             </li>
-            <li><a href="{{ url('gallery') }}">Gallery</a></li>
-            <li><a href="blog">Blog</a></li>
+            <li><a href="{{ route('gallery') }}">Gallery</a></li>
+            <li><a href="{{ route('blog') }}">Blog</a></li>
             <li><a href="contact">Contact</a></li>
 
             <!-- Authentication Links -->

@@ -95,23 +95,8 @@ Joypurhat Engineers Association
     </div>
 </section>
 
-
- <!-- /banner_bottom_agile_info -->
  <div class="banner_bottom_agile_info">
     <div class="container">
-        <!---728x90--->
-
-        <div class="agile_ab_w3ls_info row">
-            <div class="col-md-6 ab_pic_w3ls">
-                <img src="{{ asset('frontend/images/team/team-2.jpg') }}" alt=" " class="img-responsive" />
-            </div>
-            <div class="col-md-6 ab_pic_w3ls_text_info">
-                <h5>About Our Elite <span> Shoppy</span> </h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor..</p>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.</p>
-            </div>
-            <div class="clearfix"></div>
-        </div>
         <div class="banner_bottom_agile_info_inner_w3ls">
             <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
                 <figure class="effect-roxy">
@@ -133,44 +118,12 @@ Joypurhat Engineers Association
             </div>
             <div class="clearfix"></div>
         </div>
-        <!---728x90--->
     </div>
 </div>
 
-
 <section id="card" style="background-color: #fefefe !important;">
-    <div class="container wrapper pt-5 pb-5">
+    <div class="container wrapper">
         <div class="row">
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
-                    <div class="card-body py-5">
-                        <h4 class="text-center text-white py-5">Flexibility</h4>
-                        <p class="text-center text-white content-text py-3">We are able to quickly adapt to new
-                            circumstances as they arise and change our plans to navigate or overcome unanticipated
-                            obstacles with a pin point solution-based strategy</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card mb-2">
-
-                    <img class="img-fluid" src="{{asset('frontend/images/one.png')}}" alt="">
-
-                </div>
-            </div>
-
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card mb-2" style="background-color: #00add7 !important; border: 2px solid #6EBACC;">
-                    <div class="card-body py-5">
-                        <h4 class="text-center text-white">Strong Leaders</h4>
-                        <p class="text-center text-white content-text">Our strong leadership encourage, motivate,
-                            inspire and challenge our team to produce their best work and connects the team together for
-                            better solutions.</p>
-                    </div>
-                </div>
-            </div>
-
             <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card mb-2">
 
@@ -310,14 +263,74 @@ Joypurhat Engineers Association
     </div>
 </section>
 
+
+<div class="header">
+    Our Team
+</div>
+
+<section>
+    <div class="team" style="--img: url({{asset('frontend/images/four.jpeg')}})">
+        <img src="{{asset('frontend/images/four.jpeg')}}" alt="">
+        <div class="info">
+            <div class="name">Daniel Xavier</div>
+            <div class="title">CEO and Founder</div>
+            <div class="social">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-snapchat-ghost"></i>
+            </div>
+        </div>
+    </div>
+    <div class="team" style="--img: url({{asset('frontend/images/three.jpg')}})">
+        <img src="{{asset('frontend/images/three.jpg')}}" alt="">
+        <div class="info">
+            <div class="name">Andrea piacquadio</div>
+            <div class="title">Co-Founder</div>
+            <div class="social">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-snapchat-ghost"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" style="--img: url(../res/image/pexels-creation-hill-1681010.jpg)">
+        <img src="../res/image/pexels-creation-hill-1681010.jpg" alt="">
+        <div class="info">
+            <div class="name">Derek Antonio</div>
+            <div class="title">Project Manager</div>
+            <div class="social">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-snapchat-ghost"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" style="--img: url(../res/image/pexels-pixabay-220453.jpg)">
+        <img src="../res/image/pexels-pixabay-220453.jpg" alt="">
+        <div class="info">
+            <div class="name">Stephen Marcus</div>
+            <div class="title">Marketing Manager</div>
+            <div class="social">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-snapchat-ghost"></i>
+            </div>
+        </div>
+    </div>
+
+</section>
 <!-- Flip Card Start -->
 <section class="Modules about-container">
-
-    <div class="about-right py-2 w-50 fw-bold text-center">
-        <h2>mGES | Modules</h2>
-    </div>
     <div class="container py-5 ">
-        <div class="row mt-5">
+
+        <h2>JEA | Modules</h2>
+        <div class="row">
 
             <div class="col-md-3 my-3">
                 <div class="flip-card">
@@ -342,325 +355,84 @@ Joypurhat Engineers Association
                 </div>
             </div>
 
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">2</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">EMP Agency (MY)</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">EMP Agency (MY)</h6>
-                            </div>
-                            <p class="text-center px-1">Will act on behalf of their clients (employers) on VDR
-                                application and all
-                                ground handling.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">3</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">KDN SSC</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">KDN SSC</h6>
-                            </div>
-                            <p class="text-center px-1">Employers will only able to access the approval once it is
-                                shared by OSC.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">4</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">EMP. Agency (BGD)</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">EMP. Agency (BGD)</h6>
-                            </div>
-                            <p class="text-center px-1">Bangladesh’s licensed agencies will participate. Better
-                                selection and faster
-                                recruitment.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">5</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">Attestation</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">Attestation</h6>
-                            </div>
-                            <p class="text-center px-1">Bangladeshi High Commission in Kuala Lumpur will determine the
-                                procedure and
-                                after verification they will generate QR code of the employer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">6</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">Candidates</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">Candidates</h6>
-                            </div>
-                            <p class="text-center px-1">Online interview will assist the employer to select the most
-                                reliable
-                                candidates.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">7</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">E-Medical</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">E-Medical</h6>
-                            </div>
-                            <p class="text-center px-1">All registered medical center in Bangladesh will upload the
-                                medical result.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">8</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">Orientation</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">Orientation</h6>
-                            </div>
-                            <p class="text-center px-1">Orientation session and basic knowledge about work & terms for
-                                employees.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">9</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">Immigration</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">Immigration</h6>
-                            </div>
-                            <p class="text-center px-1"> Integrated module for immigration department for calling visa
-                                application,
-                                Sticker, face matching through Artificial Intelligence (AI) and flights.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">10</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">VDR Sticker mGES</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">VDR Sticker mGES</h6>
-                            </div>
-                            <p class="text-center px-1">mGES official counter in Dhaka will handle all candidate's
-                                documents
-                                securely.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">11</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">VDR Sticker High Commission</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">VDR Sticker High Commission</h6>
-                            </div>
-                            <p class="text-center px-1">To ensure safety and data security, only authorized Immigration
-                                officers
-                                will be given the access to mGES data</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">12</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">BMET</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">BMET</h6>
-                            </div>
-                            <p class="text-center px-1">Bangladesh Bureau of Manpower, Employment, and Training (BMET)
-                                will
-                                determine the procedure and the service fees.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">13</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">Labor Department</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">Labor Department</h6>
-                            </div>
-                            <p class="text-center px-1">Malaysian Labor Department will determine the kind of reports
-                                they require
-                                from the employers and the agencies</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 
 </section>
 <!-- Flip Card End -->
 
-<div class="section">
-    <div class="container">
-        <div class="row cardPro mt-3 mb-3">
 
-            <div class="col-md-4">
-                <div class="card card bg-light shadow CardXS m-2">
-                    <p>name</p>
-                    <p>dsfg sdh fsdlfs adfs</p>
-                </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="card card bg-light shadow CardXS m-2">
-                    <p>name</p>
-                    <p>dsfg sdh fsdlfs adfs</p>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Testimonial</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 d-flex justify-content-center">
+            <div id="testimonial-slider" class="owl-carousel">
+
+                <div class="testimonial">
+                    <div class="pic">
+                        <img src="http://www.markharwood.plus.com/images/people%20large/people8.jpg" alt="" class="img-responsive">
+                    </div>
+                    <h3 class="testimonial-info">
+                        Diana
+                        <small>Web Designer</small>
+                    </h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis.</p>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card bg-light shadow CardXS m-2">
-                    <p>name</p>
-                    <p>dsfg sdh fsdlfs adfs</p>
+
+                <div class="testimonial">
+                    <div class="pic">
+                        <img src="https://static.pexels.com/photos/529928/pexels-photo-529928.jpeg" alt="" class="img-responsive">
+                    </div>
+                    <h3 class="testimonial-info">
+                        krystal
+                        <small>Web Developer</small>
+                    </h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis.</p>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card bg-light shadow CardXS m-2">
-                    <p>name</p>
-                    <p>dsfg sdh fsdlfs adfs</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card bg-light shadow CardXS m-2">
-                    <p>name</p>
-                    <p>dsfg sdh fsdlfs adfs</p>
+
+                <div class="testimonial">
+                    <div class="pic">
+                        <img src="http://www.markharwood.plus.com/images/people%20large/people8.jpg" alt="" class="img-responsive">
+                    </div>
+                    <h3 class="testimonial-info">
+                        Diana
+                        <small>Web Designer</small>
+                    </h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#testimonial-slider").owlCarousel({
+            items:1,
+            itemsDesktop:[1000,1],
+            itemsDesktopSmall:[979,1],
+            itemsTablet:[768,1],
+            pagination:true,
+            navigation:false,
+            navigationText:["",""],
+            slideSpeed:500,
+            singleItem:true,
+            autoPlay:true
+        });
+    });
+</script>
+</body>
+</html>
 
 @endsection

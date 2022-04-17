@@ -3,127 +3,183 @@
 
 @section('content')
 
-    <div class="container mt-5 mb-5">
-        <div class="container">
-            {{-- <div class="row">
-            <div class="col-md-6 d-flex">
-                <div class="header_about">
-                    <img src="{{asset('frontend/images/logo.png')}}" style="width:120px;padding-top:2px;">
-    </div>
-    <div class="header_about mt-4 me-2 fw-bold">
-        <h6 class="JyPText">Joypurhat</h6>
-        <h6 class="JyTPext">Engineers Association</h6>
-    </div>
-</div>
 
-<div class="col-md-6 text-end pt-4">
-    <p>Central Bus Terminal, Jouypurhat <i class="fas fa-map-marker-alt"></i></p>
-    <p>info@jeabd.org <i class="fas fa-envelope"></i></p>
-    <p>+880 1763 493649 <i class="fas fa-phone"></i></p>
-</div>
-</div> --}}
+ <!-- /banner_bottom_agile_info -->
+ <div class="banner_bottom_agile_info">
+    <div class="container">
+        <!---728x90--->
 
-    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-      Link with href
-    </a>
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      Button with data-bs-target
-    </button>
-  <div class="collapse" id="collapseExample">
-      joypurhat
-  </div>
-
-            <div class="row ">
-                <div class=" d-flex justify-content-center">
-                    <div class="header_about">
-                        <img src="{{ asset('frontend/images/logo.png') }}" style="width:120px;padding-top:2px;">
-                    </div>
-                    <div class="header_about mt-4 me-2 fw-bold">
-                        <h4 class="Thana">Khetlal Thana Committee</h4>
-                        <p><span class="Joyouhat">Joypurhat</span> <span class="Enginners">Engineer's
-                                Association</span></p>
-                    </div>
-                </div>
-
-                <div class="row justify-content-between Thak_Border_top">
-                    <small class="col-md-6">
-                        Source : jea/thak/b/2022/no-04
-                    </small>
-                    <small class="col-md-6 date_Thak text-end ">
-                        Date : 18th Feb 2022
-                    </small>
-                </div>
-                <div class="row mt-3">
-                    <p class="text-gray text-bold text-gray-100 text-success text-justify">
-                        The following executive members were approved by the Joypurhat Engineers Association in the Khetlal
-                        Thana Committee.
-                    </p>
-                </div>
-
-
-
-                <div class="row justify-content-center mt-4 text-center">
-
-                    <div class="col-md-3">
-                        <div class="mt-5 mb-3">
-                            <img src="{{ asset('frontend/images/team/ap.jpeg') }}" class="ImgThak" alt="">
-                            <p>Engr. Apurbo Kumar Anup</p>
-                            <small>Software Engineer</small>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mt-5 mb-3">
-                            <img src="{{ asset('frontend/images/team/ap.jpeg') }}" class="ImgThak" alt="">
-                            <p>Engr. Apurbo Kumar Anup</p>
-                            <small>Software Engineer</small>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mt-5 mb-3">
-                            <img src="{{ asset('frontend/images/team/ap.jpeg') }}" class="ImgThak" alt="">
-                            <p>Engr. Apurbo Kumar Anup</p>
-                            <small>Software Engineer</small>
-                        </div>
-                    </div>
-
-                </div>
+        <div class="agile_ab_w3ls_info row">
+            <div class="col-md-6 ab_pic_w3ls">
+                <img src="{{ asset('frontend/images/team/team-2.jpg') }}" alt=" " class="img-responsive" />
             </div>
-
+            <div class="col-md-6 ab_pic_w3ls_text_info">
+                <h5>About Our Elite <span> Shoppy</span> </h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor..</p>
+                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.</p>
+            </div>
+            <div class="clearfix"></div>
         </div>
     </div>
+</div>
 
-    {{-- নিম্নোক্ত কার্যনির্বাহী সম্মানিত সদস্যবৃন্দের জয়পুরহাট ইঞ্জিনিয়ার এসোসিয়েশন কর্তৃক  ক্ষেতলাল থানা কমিটিতে অনুমোদন করা হলো। --}}
+    <div class="row mainX">
+        <div class="profile-card mb-5">
+            <div class="img">
+                <img src="{{asset('frontend/images/two.jpg')}}">
+            </div>
+            <div class="caption">
+                <h3>Vin Diesel</h3>
+                <p>Senior App Developer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card mb-5">
+            <div class="img">
+                <img src="{{asset('frontend/images/two.jpg')}}">
+            </div>
+            <div class="caption">
+                <h3>David Corner</h3>
+                <p>Front End Developer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card mb-5">
+            <div class="img">
+                <img src="{{asset('frontend/images/two.jpg')}}">
+            </div>
+            <div class="caption">
+                <h3>Tom Cruise</h3>
+                <p>Full Stact Developer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card mb-5">
+            <div class="img">
+                <img src="{{asset('frontend/images/two.jpg')}}">
+            </div>
+            <div class="caption">
+                <h3>Tom Cruise</h3>
+                <p>Full Stact Developer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card mb-5">
+            <div class="img">
+                <img src="{{asset('frontend/images/two.jpg')}}">
+            </div>
+            <div class="caption">
+                <h3>Tom Cruise</h3>
+                <p>Full Stact Developer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card mb-5">
+            <div class="img">
+                <img src="{{asset('frontend/images/two.jpg')}}">
+            </div>
+            <div class="caption">
+                <h3>Tom Cruise</h3>
+                <p>Full Stact Developer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card mb-5">
+            <div class="img">
+                <img src="{{asset('frontend/images/two.jpg')}}">
+            </div>
+            <div class="caption">
+                <h3>Tom Cruise</h3>
+                <p>Full Stact Developer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card mb-5">
+            <div class="img">
+                <img src="{{asset('frontend/images/two.jpg')}}">
+            </div>
+            <div class="caption">
+                <h3>Tom Cruise</h3>
+                <p>Full Stact Developer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card mb-5">
+            <div class="img">
+                <img src="{{asset('frontend/images/two.jpg')}}">
+            </div>
+            <div class="caption">
+                <h3>Tom Cruise</h3>
+                <p>Full Stact Developer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card mb-5">
+            <div class="img">
+                <img src="{{asset('frontend/images/two.jpg')}}">
+            </div>
+            <div class="caption">
+                <h3>Tom Cruise</h3>
+                <p>Full Stact Developer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card mb-5">
+            <div class="img">
+                <img src="{{asset('frontend/images/two.jpg')}}">
+            </div>
+            <div class="caption">
+                <h3>Tom Cruise</h3>
+                <p>Full Stact Developer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
 
-    <style>
-        .Thana {
-            color: rgb(255, 255, 255);
-            text-shadow: 0 0 3px #0c0c0c, 0 0 5px #0000FF;
-            font-weight: 600;
-        }
+    </div>
 
-        .Joyouhat {
-            color: rgb(66, 10, 164);
-            font-weight: 600;
-        }
 
-        .Enginners {
-            color: rgb(107, 3, 39);
-            font-weight: 600;
-        }
-
-        .Thak_Border_top {
-            border-top: 2px solid #3e091b;
-        }
-
-        .date_Thak {
-            float: right;
-        }
-        .ImgThak{
-            width: 200px;
-            height:250px;
-            object-fit: cover;
-            text-align: center;
-        }
-
-    </style>
 @endsection
