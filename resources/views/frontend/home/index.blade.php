@@ -95,7 +95,7 @@ Joypurhat Engineers Association
     </div>
 </section>
 
- <div class="banner_bottom_agile_info">
+<div class="banner_bottom_agile_info">
     <div class="container">
         <div class="banner_bottom_agile_info_inner_w3ls">
             <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
@@ -184,6 +184,80 @@ Joypurhat Engineers Association
     </div>
 </section>
 
+<section class="services">
+    <div class="container">
+        <div class="services-title">
+            <div class="title">
+                <h2><span> Our </span> Services</h2>
+            </div>
+        </div>
+
+        <div class="services-box">
+
+            <div class="box">
+                <div class="ser-box">
+                    <div class="icon">
+                        <img src="{{ asset('frontend/img/setting.p')}}ng">
+                    </div>
+                    <h4>Easy To Setup</h4>
+                    <p>Lorem Ipsum is simply dummy and typesetting industry.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="ser-box">
+                    <div class="icon">
+                        <img src="{{ asset('frontend/img/speed.png')}}">
+                    </div>
+                    <h4>Fast Preformance</h4>
+                    <p>Lorem Ipsum is simply dummy and typesetting industry.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="ser-box">
+                    <div class="icon">
+                        <img src="{{ asset('frontend/img/protect.p')}}ng">
+                    </div>
+                    <h4>Privacy Protected</h4>
+                    <p>Lorem Ipsum is simply dummy and typesetting industry.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="ser-box">
+                    <div class="icon">
+                        <img src="{{ asset('frontend/img/backup.pn')}}g">
+                    </div>
+                    <h4>Monthly Backup</h4>
+                    <p>Lorem Ipsum is simply dummy and typesetting industry.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="ser-box">
+                    <div class="icon">
+                        <img src="{{ asset('frontend/img/freessl.p')}}ng">
+                    </div>
+                    <h4>Free SSL Certificate</h4>
+                    <p>Lorem Ipsum is simply dummy and typesetting industry.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="ser-box">
+                    <div class="icon">
+                        <img src="{{ asset('frontend/img/database.')}}png">
+                    </div>
+                    <h4>Unlimited Database</h4>
+                    <p>Lorem Ipsum is simply dummy and typesetting industry.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 <section id="services" class="my-3">
     <div class="services-content wrapper mt-5">
         <h4 class="text-center">JEA Service</h4>
@@ -262,7 +336,6 @@ Joypurhat Engineers Association
         </div>
     </div>
 </section>
-
 
 <div class="header">
     Our Team
@@ -361,9 +434,73 @@ Joypurhat Engineers Association
 </section>
 <!-- Flip Card End -->
 
+<div class=" d-flex justify-content-center">
+    <div id="carouselExampleIndicators" class="carousel slide col-md-8" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner ">
+            <div class="carousel-item active">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img src="http://www.markharwood.plus.com/images/people%20large/people8.jpg" alt=""
+                            class="img-responsive">
+                    </div>
+                    <h3 class="testimonial-info">
+                        Diana
+                        <small>Web Designer</small>
+                    </h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img src="http://www.markharwood.plus.com/images/people%20large/people8.jpg" alt=""
+                            class="img-responsive">
+                    </div>
+                    <h3 class="testimonial-info">
+                        Diana
+                        <small>Web Designer</small>
+                    </h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img src="http://www.markharwood.plus.com/images/people%20large/people8.jpg" alt=""
+                            class="img-responsive">
+                    </div>
+                    <h3 class="testimonial-info">
+                        Diana
+                        <small>Web Designer</small>
+                    </h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
 
+@endsection
 
-<html>
+{{-- <html>
 <head lang="en">
     <meta charset="UTF-8">
     <title>Testimonial</title>
@@ -433,6 +570,4 @@ Joypurhat Engineers Association
     });
 </script>
 </body>
-</html>
-
-@endsection
+</html> --}}
