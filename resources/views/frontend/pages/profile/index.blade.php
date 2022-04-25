@@ -9,9 +9,19 @@
 <body>
 
 
-    @foreach ($users as $user )
+
 <p>{{$user->name}}</p>
-    @endforeach
+<p>{{$user->job_work}}</p>
+
+    <form method="POST" action="{{ route('web.profile.update',$user->id) }}">
+        @csrf
+        @method('PUT')
+        <input type="text" name="name" value="{{ $user->name }}" id="name">
+        <input type="text" name="job_work" value="{{ $user->job_work }}" id="job_work">
+        <button type="submit">
+            submit
+        </button>
+    </form>
 
 </body>
 </html>

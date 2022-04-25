@@ -17,8 +17,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::orderBy('created_at', 'DESC')->paginate(20);
-        return view('frontend.pages.profile.index', compact('users'));
+        $user = Auth::user();
+        return view('frontend.pages.profile.index', compact('user'));
 
     }
 
@@ -89,7 +89,15 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = Auth::user();
+        // $user = User::find($id);
+        $user->name = $request->name;
+        $user->job_work = $request->job_work;
+        $user->save();
+
+        return back();
+
+
     }
 
     /**
