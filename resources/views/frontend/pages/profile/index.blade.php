@@ -12,6 +12,7 @@
 
 <p>{{$user->name}}</p>
 <p>{{$user->job_work}}</p>
+dfsdf
 
     <form method="POST" action="{{ route('web.profile.update',$user->id) }}">
         @csrf
