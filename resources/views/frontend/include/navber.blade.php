@@ -81,7 +81,7 @@
                     </a>
 
                     <div class="dropdown-content">
-                        <a href="{{ route('web.profile.index') }}">My Profile</a>
+                        <a href="{{ route('web.profile') }}">My Profile</a>
                         <a href="myprofile">Settings</a>
 
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();

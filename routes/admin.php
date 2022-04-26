@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\IntThanaController;
 use App\Http\Controllers\Admin\ThanaCommitteeController;
 use App\Http\Controllers\Admin\ThanaCommitteeTypeController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,7 @@ Route::group(['prefix' => 'dashboard/', 'as' => 'admin.', 'middleware' => ['auth
     Route::resource('thana_type', ThanaCommitteeTypeController::class);
 
     Route::resource('thana', ThanaCommitteeController::class);
-
+    Route::resource('profile', UserController::class);
     Route::group(['prefix' => 'int-thana/', 'as' => 'int_thana.'], function () {
         Route::get('joypurhat', [IntThanaController::class, 'joypurhat'])->name('joypurhat');
         Route::get('panchbibi', [IntThanaController::class, 'panchbibi'])->name('panchbibi');

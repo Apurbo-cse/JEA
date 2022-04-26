@@ -7,37 +7,7 @@
 
 @section('content')
 
-
-
 <br><br><br><br><br>
-
-
-
-
-
-<p>{{$user->name}}</p>
-<p>{{$user->last_name}}</p>
-<p>{{$user->email}}</p>
-<img src="{{asset($user->image)}}" class="img-fluid" alt=""
-                        style="height:380px;width:330px;">
-
-
-
-    <form action="{{route('web.profile.update', $user->id)}}" method="post" enctype="multipart/form-data">
-        @csrf
-        @method('put')
-
-        <input type="text" name="name" value="{{ $user->name }}" id="name">
-        <input type="text" name="last_name" value="{{ $user->last_name }}" id="job_work">
-        <input type="text" name="job_work" value="{{ $user->job_work }}" id="job_work">
-        <input type="file" name="image"id="image">
-        <button type="submit">
-            submit
-        </button>
-    </form>
-
-
-<a href="{{ route('web.profile.edit', $user->id) }}">dscsdfsd</a>
 
     <!-- ======= About Sectionn ======= -->
     <section id="about" style="margin-top:30px;">
@@ -48,21 +18,20 @@
 
             <div class="sectionn-title">
                 <h2>Hello!!! I'm</h2>
-                <p style="color:#007B98;font-size:25px;">{{ $user->name}}</p>
+                <p style="color:#007B98;font-size:25px;">{{ $user->name}} {{ $user->last_name}}</p>
             </div>
 
             <div class="row">
                 <div class="col-lg-4" data-aos="fade-right">
-                    <img src="" class="img-fluid" alt=""
-                        style="height:380px;width:330px;">
+                    <img src="{{asset($user->image)}}" class="img-fluid object-fit" alt=""
+                        style="height:350px; width:330px; "> <br> <br>
+                         <a href="{{ route('web.profileEdit') }}" class="btn text-dark border-dark p-2">Edit Profile</a>
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                     <h3 style="color:#DE3163;font-size:18px;">{{ $user->job_digination }}</h3>
                     <br>
                     <p class="font-italic" style="color:#CCCCFF;font-size:12px;text-align:justify;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore
-                        magna aliqua.
+                       {{ $user->description }}
                     </p>
                     <br>
 
@@ -71,11 +40,11 @@
                             <ul>
                                 <li><i class="icofont-rounded-right"></i> <strong
                                         style="color:#174044;font-size:13px;">Qualification : </strong> <b
-                                        style="color:#174044;font-size:13px;">course_name <small
-                                            style="font-size:7px;color:#581845;">course_quali</small>
+                                        style="color:#174044;font-size:13px;">{{ $user->job_designation }} <small
+                                            style="font-size:7px;color:#581845;">{{ $user->course_status }}</small>
                                     </b></li>
                                 <li><i class="icofont-rounded-right"></i> <strong
-                                        style="color:#174044;font-size:13px;">Subject : </strong> <b
+                                        style="color:#174044;font-size:13px;">Subject :</strong> <b
                                         style="color:#174044;font-size:13px;">{{ $user->course_subject}}</b></li>
                                 <li><i class="icofont-rounded-right"></i> <strong
                                         style="color:#174044;font-size:13px;">Job : </strong> <b
@@ -106,37 +75,31 @@
                     </div>
                     <br>
                     <p style="color:gray;font-size:12px;text-align:justify;">
-                        Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci
-                        omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                        Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque
-                        neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni
-                        laudantium dolores.
+                        {{ $user->description }}
                     </p>
 
-                    <button>eefg sidufe</button>
-
                     <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
-                        <li><a target="_blank" href="facelink" class="facebook">
+                        <li><a target="_blank" href="{{ $user->facebook }}" class="facebook">
                                 <div class="front"><i class="fa fa-facebook" aria-hidden="true"
                                         style="color:white;margin-top:5px;"></i></div>
                                 <div class="back"><i class="fa fa-facebook" aria-hidden="true" style="color:black;"></i>
                                 </div>
                             </a></li>
-                        <li><a target="_blank" href="linlink" class="linkedin">
+                        <li><a target="_blank" href="{{ $user->linkedin }}" class="linkedin">
                                 <div class="front"><i class="fa fa-linkedin" aria-hidden="true"
                                         style="color:white;margin-top:5px;"></i></div>
                                 <div class="back"><i class="fa fa-linkedin" aria-hidden="true" style="color:black;"></i>
                                 </div>
                             </a></li>
 
-                            <li><a target="_blank" href="mailto:email" class="email">
+                            <li><a target="_blank" href="{{ $user->email }}" class="email">
                                 <div class="front"><i class="fa fa-envelope-o" aria-hidden="true"
                                         style="color:white;margin-top:5px;"></i></div>
                                 <div class="back"><i class="fa fa-envelope-o" aria-hidden="true" style="color:black;"></i>
                                 </div>
                         </a></li>
 
-                        <li><a target="_blank" href="tel:+88phone" class="phone">
+                        <li><a target="_blank" href="{{ $user->phone }}" class="phone">
                                 <div class="front"><i class="fa fa-phone" aria-hidden="true"
                                         style="color:white;margin-top:5px;"></i></div>
                                 <div class="back"><i class="fa fa-phone" aria-hidden="true" style="color:black;"></i>
@@ -160,7 +123,7 @@
                     <div class="count-box">
                         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                         <b style="color:white;font-size:12px;">HSC</b>
-                        <span data-toggle="counter-up" style="font-size:12px;">{{ $user->intsub }}</span>
+                        <span data-toggle="counter-up" style="font-size:12px;">{{ $user->hsc_group }}</span>
                         <p style="color:orange;fon-weight:400;font-size:11px;"> {{ $user->hsc_institute }}</p>
                     </div>
                 </div>
@@ -169,8 +132,8 @@
                     <div class="count-box">
                         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                         <b style="color:white;font-size:12px;">Diploma in Engineering</b>
-                        <span data-toggle="counter-up" style="font-size:12px;">{{ $user->dipsub }}</span>
-                        <p style="color:orange;fon-weight:400;font-size:11px;">{{ $user->dipname }}</p>
+                        <span data-toggle="counter-up" style="font-size:12px;">{{ $user->diploma_subject }}</span>
+                        <p style="color:orange;fon-weight:400;font-size:11px;">{{ $user->diploma_institute }}</p>
                     </div>
                 </div>
 
@@ -187,8 +150,8 @@
                     <div class="count-box">
                         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                         <b style="color:white;font-size:12px;">BSc in Engineering</b>
-                        <span data-toggle="counter-up" style="font-size:12px;">{{ $user->bscsub}}</span>
-                        <p style="color:orange;fon-weight:400;font-size:11px;">{{ $user->bscname }}</p>
+                        <span data-toggle="counter-up" style="font-size:12px;">{{ $user->bsc_subject}}</span>
+                        <p style="color:orange;fon-weight:400;font-size:11px;">{{ $user->bsc_institute }}</p>
                     </div>
                 </div>
 
@@ -196,8 +159,8 @@
                     <div class="count-box">
                         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                         <b style="color:white;font-size:12px;">MSc in Engineering</b>
-                        <span data-toggle="counter-up" style="font-size:12px;">{{ $user->mscsub }}</span>
-                        <p style="color:orange;fon-weight:400;font-size:11px;">{{ $user->mscname }}</p>
+                        <span data-toggle="counter-up" style="font-size:12px;">{{ $user->msc_subject }}</span>
+                        <p style="color:orange;fon-weight:400;font-size:11px;">{{ $user->msc_institute }}</p>
                     </div>
                 </div>
 
@@ -205,8 +168,8 @@
                     <div class="count-box">
                         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                         <b style="color:white;font-size:12px;">EMBA / MBA</b>
-                        <span data-toggle="counter-up" style="font-size:12px;">{{ $user->mbasub }}</span>
-                        <p style="color:orange;fon-weight:400;font-size:11px;">{{ $user->mbaname }}</p>
+                        <span data-toggle="counter-up" style="font-size:12px;">{{ $user->mba_subject }}</span>
+                        <p style="color:orange;fon-weight:400;font-size:11px;">{{ $user->mba_institute }}</p>
                     </div>
                 </div>
 
@@ -226,12 +189,12 @@
 
             <div class="col-md-4 mb-3" style="font-size:14px;font-weight:600;">
                 <label style="font-size:14px;font-weight:400;" for="validationServer01">Father Name</label> :
-                {{ $user->fathername}}
+                {{ $user->father_name}}
             </div>
 
             <div class="col-md-4 mb-3" style="font-size:14px;font-weight:600;">
                 <label style="font-size:14px;font-weight:400;" for="validationServer02">Mother Name</label> :
-                {{ $user-> mothername }}
+                {{ $user->mother_name }}
             </div>
 
         </div>
@@ -247,12 +210,12 @@
 
             <div class="col-md-4 mb-3" style="font-size:14px;font-weight:600;">
                 <label style="font-size:14px;font-weight:400;" for="validationServer01">Present Address</label> :
-                {{ $user->preadd }}
+                {{ $user->present_add }}
             </div>
 
             <div class="col-md-4 mb-3" style="font-size:14px;font-weight:600;">
                 <label style="font-size:14px;font-weight:400;" for="validationServer02">Permanent Address</label> :
-                {{ $user-> peradd }}
+                {{ $user->permanent_add }}
             </div>
 
         </div>
@@ -267,7 +230,7 @@
 
             <div class="col-md-3 mb-3" style="font-size:14px;font-weight:600;">
                 <label style="font-size:14px;font-weight:400;" for="validationServer01">Alternate Phone</label> :
-                {{ $user-> phone }}
+                {{ $user->phone }}
             </div>
 
             <div class="col-md-3 mb-3" style="font-size:14px;font-weight:600;">

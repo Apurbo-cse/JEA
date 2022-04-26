@@ -4,7 +4,7 @@ use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -58,16 +58,13 @@ Route::group(['prefix'=>'thana-committee'], function (){
 Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 
 
-// Route::middleware('auth')->group(function () {
-//     Route::resource('user', UserController::class);
-//  });
-
-
 Route::group(['prefix' => '/', 'as' => 'web.', 'middleware' => ['auth']], function () {
     Route::get('/home', [FrontendController::class, 'index'])->name('index');
-    Route::resource('profile', UserController::class);
-    Route::get('/self-profile-edit', [ProfileController::class, 'selfProfileEdit'])->name('selfProfileEdit');
-    Route::post('/self-profile-update', [ProfileController::class, 'selfProfileUpdate'])->name('selfProfileUpdate');
+
+    Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+    Route::get('/profile-edit', [ProfileController::class, 'profileEdit'])->name('profileEdit');
+    Route::post('/profile-update', [ProfileController::class, 'profileUpdate'])->name('profileUpdate');
+    Route::get('/user-profile', [ProfileController::class, 'profileIndex'])->name('profileIndex');
 });
 
 

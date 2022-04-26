@@ -12,34 +12,6 @@
 <br><br><br><br><br>
 
 
-
-
-
-<p>{{$user->name}}</p>
-<p>{{$user->last_name}}</p>
-<p>{{$user->email}}</p>
-<img src="{{asset($user->image)}}" class="img-fluid" alt=""
-                        style="height:380px;width:330px;">
-
-
-
-    <form action="{{route('web.profile.update', $user->id)}}" method="post" enctype="multipart/form-data">
-        @csrf
-        @method('put')
-
-        <input type="text" name="name" value="{{ $user->name }}" id="name">
-        <input type="text" name="last_name" value="{{ $user->last_name }}" id="job_work">
-        <input type="text" name="job_work" value="{{ $user->job_work }}" id="job_work">
-        <input type="file" name="image"id="image">
-        <button type="submit">
-            submit
-        </button>
-    </form>
-
-
-<a href="{{ route('web.profile.edit', $user->id) }}">dscsdfsd</a>
-
-    <!-- ======= About Sectionn ======= -->
     <section id="about" style="margin-top:30px;">
 
 
@@ -53,7 +25,7 @@
 
             <div class="row">
                 <div class="col-lg-4" data-aos="fade-right">
-                    <img src="" class="img-fluid" alt=""
+                    <img src="{{asset($user->image)}}" class="img-fluid" alt=""
                         style="height:380px;width:330px;">
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
@@ -112,6 +84,8 @@
                         neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni
                         laudantium dolores.
                     </p>
+
+                    <button>eefg sidufe</button>
 
                     <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
                         <li><a target="_blank" href="facelink" class="facebook">

@@ -10,11 +10,21 @@ use Illuminate\Support\Str;
 
 class ProfileController extends Controller
 {
-    public function selfProfileEdit(){
+    public function profile(){
         $user = Auth::user();
-        return view('selfProfileEdit', compact('user'));
+        return view('frontend.pages.profile.profile', compact('user'));
     }
-    public function selfProfileUpdate(Request $request){
+
+    public function profileEdit(){
+        $user = Auth::user();
+        return view('frontend.pages.profile.profileEdit', compact('user'));
+    }
+
+    public function profileIndex(){
+        $user = Auth::user();
+        return view('frontend.pages.profile.profileIndex', compact('user'));
+    }
+    public function profileUpdate(Request $request){
         $user = Auth::user();
 
         $user->name = $request->name;
