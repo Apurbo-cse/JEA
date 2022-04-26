@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -65,7 +66,11 @@ Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 Route::group(['prefix' => '/', 'as' => 'web.', 'middleware' => ['auth']], function () {
     Route::get('/home', [FrontendController::class, 'index'])->name('index');
     Route::resource('profile', UserController::class);
+    Route::get('/self-profile-edit', [ProfileController::class, 'selfProfileEdit'])->name('selfProfileEdit');
+    Route::post('/self-profile-update', [ProfileController::class, 'selfProfileUpdate'])->name('selfProfileUpdate');
 });
+
+
 
 
 
