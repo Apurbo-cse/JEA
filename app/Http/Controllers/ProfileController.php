@@ -109,6 +109,7 @@ class ProfileController extends Controller
         $user->religion = $request->input('religion');
         $user->blood = $request->input('blood');
 
+
         
         $user->save();
 
