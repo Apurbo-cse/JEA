@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -15,6 +16,11 @@ class ProfileController extends Controller
         return view('frontend.pages.profile.profile', compact('user'));
     }
 
+    // public function profile($id){
+    //     $data['user'] = User::where('id', $id)->first();
+    //     return view('frontend.pages.profile.profile', $data);
+    // }
+
     public function profileEdit(){
         $user = Auth::user();
         return view('frontend.pages.profile.profileEdit', compact('user'));
@@ -27,7 +33,7 @@ class ProfileController extends Controller
     public function profileUpdate(Request $request){
         $user = Auth::user();
 
-        $user->name = $request->name;
+        $user->name = $request->input('name');
         $user->last_name = $request->input('last_name');
 
         // $user->email = $request->email;
@@ -93,14 +99,19 @@ class ProfileController extends Controller
         $user->father_name = $request->input('father_name');
         $user->mother_name = $request->input('mother_name');
 
-        $user->present_add = $request->input('present_add');
-        $user->permanent_add = $request->input('permanent_add');
+        $user->district = $request->input('district');
+        $user->thana = $request->input('thana');
+
+        $user->course_name = $request->input('course_name');
 
         $user->nid = $request->input('nid');
+        $user->gender = $request->input('gender');
         $user->religion = $request->input('religion');
         $user->blood = $request->input('blood');
+
+        
         $user->save();
 
-        return back();
+        return redirect()->back();
     }
 }

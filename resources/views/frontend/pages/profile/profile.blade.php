@@ -9,6 +9,14 @@
 
 <br><br><br><br><br>
 
+<div class="container">
+    <form action="{{route('web.profileUpdate')}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <input type="text" class="bg-dark" name="name" value="{{ $user->name }}">
+        <input type="text" class="bg-dark" name="last_name" id="" value="{{ $user->last_name }}">
+        <button type="submit" class="btn-success">submit</button>
+    </form>
+</div>
     <!-- ======= About Sectionn ======= -->
     <section id="about" style="margin-top:30px;">
 

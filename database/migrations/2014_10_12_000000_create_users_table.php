@@ -72,7 +72,12 @@ class CreateUsersTable extends Migration
             $table->string('present_add')->nullable();
             $table->string('permanent_add')->nullable();
 
+
+            $table->string('district')->nullable();
+            $table->string('thana')->nullable();
+
             $table->string('nid')->nullable();
+            $table->string('gander')->nullable();
             $table->string('religion')->nullable();
             $table->string('blood')->nullable();
 

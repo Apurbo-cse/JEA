@@ -46,6 +46,8 @@ class User extends Authenticatable
 
         'present_add','permanent_add',
 
+        'gender','district','thana',
+
         'nid','religion','blood',
 
     ];
