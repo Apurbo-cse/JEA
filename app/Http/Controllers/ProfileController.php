@@ -31,6 +31,7 @@ class ProfileController extends Controller
         return view('frontend.pages.profile.profileIndex', compact('user'));
     }
     public function profileUpdate(Request $request){
+    //    dd($request->all());
         $user = Auth::user();
 
         $user->name = $request->input('name');
@@ -56,16 +57,15 @@ class ProfileController extends Controller
             $image             = $request->file('image');
             $folder_path       = 'images/user/';
             $image_new_name    = Str::random(10) . '-' . now()->timestamp . '.' . $image->getClientOriginalExtension();
-            //resize and save to server
-            // Image::make($image->getRealPath())->save($folder_path . $image_new_name);
-            // $image->
             $image->move( $folder_path,$image_new_name);
             $user->image   = $folder_path . $image_new_name;
         }
 
-        $user->course_name = $request->input('course_name');
         $user->course_subject = $request->input('course_subject');
         $user->course_status = $request->input('course_status');
+        $user->course_name = $request->input('course_name');
+        $user->permanent_add = $request->input('permanent_add');
+        $user->present_add = $request->input('present_add');
 
         $user->job_type = $request->input('job_type');
         $user->job_designation = $request->input('job_designation');
@@ -105,12 +105,11 @@ class ProfileController extends Controller
         $user->course_name = $request->input('course_name');
 
         $user->nid = $request->input('nid');
+        $user->dob = $request->input('dob');
         $user->gender = $request->input('gender');
         $user->religion = $request->input('religion');
-        $user->blood = $request->input('blood');
+        $user->blood = $request->dfghjkl;
 
-
-        
         $user->save();
 
         return redirect()->back();

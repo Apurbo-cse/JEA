@@ -116,43 +116,52 @@
                         <option value="Female">Female</option>
                     </select></div>
                 <div class="col-md-2"><label for="date_of_birth">Date Of Birth</label></div>
-                <div class="col-md-4"><input class="form-control" name="date_of_birth" type="date" value=""
+                <div class="col-md-4"><input class="form-control" name="dob" type="date" value="{{ Carbon\Carbon::parse($user->dob)->format('m/d/Y') }}"
                         id="date_of_birth"></div>
             </div>
 
             <div class="row form-group">
                 <div class="col-md-2"><label for="father_name">Father&#039;s Name </label></div>
-                <div class="col-md-4"><input class="form-control" name="father_name" type="text" value=""
+                <div class="col-md-4"><input class="form-control" name="father_name" type="text" value="{{ $user->father_name }}"
                         id="father_name"></div>
                 <div class="col-md-2"><label for="mother_name">Mother&#039;s Name </label></div>
-                <div class="col-md-4"><input class="form-control" name="mother_name" type="text" value=""
+                <div class="col-md-4"><input class="form-control" name="mother_name" type="text" value="{{ $user->mother_name }}"
                         id="mother_name"></div>
             </div>
 
 
             <div class="row form-group">
-                <div class="col-md-2"><label for="present_address">Permanent Address
-                    </label></div>
-                <div class="col-md-4"> <input class="form-control" rows="2" cols="40" name="present_address" type="text"
-                        value="" id="present_address"></div>
-                <div class="col-md-2"><label for="permanent_address">Present Address</label></div>
-                <div class="col-md-4"> <input class="form-control" rows="2" cols="40" name="permanent_address"
-                        type="text" value="" id="permanent_address"></div>
+
+                <div class="col-md-2">
+                    <label for="present_address">Permanent Address
+                </label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" name="permanent_add" type="text"value="{{ $user->permanent_add }}" id="present_address">
+                </div>
+
+                <div class="col-md-2">
+                    <label for="permanent_address">Present Address</label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" name="present_add" type="text" value="{{ $user->present_add }}" id="permanent_address">
+                </div>
             </div>
+
             <div class="row form-group">
 
                 <div class="col-md-2"><label for="blood_group">Blood Group </label>
                 </div>
-                <div class="col-md-4"><select class="form-control" id="blood_group" name="blood">
-                        <option value="{{ $user->blood }}" >{{ $user->blood }}</option>
-                        <option value="A+">A+</option>
-                        <option value="A-">A-</option>
-                        <option value="B+">B+</option>
-                        <option value="B-">B-</option>
-                        <option value="O+">O+</option>
-                        <option value="O-">O-</option>
-                        <option value="AB+">AB+</option>
-                        <option value="AB-">AB-</option>
+                <div class="col-md-4">
+                    <select class="form-control" id="blood_group" name="dfghjkl">
+                        <option value="A+" @if ($user->blood == 'A+') selected @endif >A+</option>
+                        <option value="A-" @if ($user->blood == 'A-') selected @endif >A-</option>
+                        <option value="B+" @if ($user->blood == 'B+') selected @endif >B+</option>
+                        <option value="B-" @if ($user->blood == 'B-') selected @endif >B-</option>
+                        <option value="O+" @if ($user->blood == 'O+') selected @endif >O+</option>
+                        <option value="O-" @if ($user->blood == 'O-') selected @endif >O-</option>
+                        <option value="AB+" @if ($user->blood == 'AB+') selected @endif >AB+</option>
+                        <option value="AB-" @if ($user->blood == 'AB-') selected @endif >AB-</option>
                     </select>
                 </div>
                 <div class="col-md-2"><label for="blood_group">Religion </label>
@@ -171,11 +180,11 @@
             <div class="row form-group">
                 <div class="col-md-2"><label for="nationality">Facbook Link</label>
                 </div>
-                <div class="col-md-4"><input class="form-control" name="facebook" type="text" value=""
+                <div class="col-md-4"><input class="form-control" name="facebook" type="text" value="{{ $user->facebook }}"
                         id="nationality">
                 </div>
                 <div class="col-md-2"><label for="home_telephone">Linkedin Link</label></div>
-                <div class="col-md-4"><input class="form-control" name="linkedin" type="text" value=""
+                <div class="col-md-4"><input class="form-control" name="linkedin" type="text" value="{{ $user->linkedin }}"
                         id="home_telephone"></div>
 
             </div>
@@ -183,13 +192,13 @@
 
             <div class="row form-group">
                 <div class="col-md-1"><label for="nid_no">NID No</span> </label></div>
-                <div class="col-md-3"><input class="form-control" name="district" type="text" value="" id="nid_no">
+                <div class="col-md-3"><input class="form-control" name="nid" type="text" value="{{ $user->nid }}" id="nid_no">
                 </div>
                 <div class="col-md-1"><label for="zip_code">District</label>
                 </div>
                 <div class="col-md-3">
-                    <select class="form-control" id="blood_group" name="blood">
-                        <option value="{{ $user->district }}" >{{ $user->thana }}</option>
+                    <select class="form-control" id="blood_group" name="district">
+                        <option value="{{ $user->district }}" >{{ $user->district }}</option>
                         <option >Joypurhat</option>
                         <option >Other</option>
                     </select>

@@ -48,7 +48,7 @@ class User extends Authenticatable
 
         'gender','district','thana',
 
-        'nid','religion','blood',
+        'nid','dob', 'religion','blood',
 
     ];
 

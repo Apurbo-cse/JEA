@@ -77,7 +77,8 @@ class CreateUsersTable extends Migration
             $table->string('thana')->nullable();
 
             $table->string('nid')->nullable();
-            $table->string('gander')->nullable();
+            $table->string('dob')->nullable();
+            $table->string('gender')->nullable();
             $table->string('religion')->nullable();
             $table->string('blood')->nullable();
 
