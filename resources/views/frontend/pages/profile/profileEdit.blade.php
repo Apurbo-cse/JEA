@@ -86,11 +86,10 @@
                 </div>
                 <div class="col-md-3">
                     <select name="course_name" id="" class="form-control" required>
-                        <option value="{{ $user->course_name }}">{{ $user->course_name }}</option>
-                        <option>Diploma in Engineering</option>
-                        <option>BSc in Engineering (Diploma)</option>
-                        <option>BSc in Engineering</option>
-                        <option>MSc in Engineering / MBA </option>
+                        <option value="Diploma in Engineering" @if ($user->course_name == 'Diploma in Engineering') selected @endif >Diploma in Engineering</option>
+                        <option value="BSc in Engineering (Diploma)" @if ($user->course_name == 'BSc in Engineering (Diploma)') selected @endif >BSc in Engineering (Diploma)</option>
+                        <option value="BSc in Engineering" @if ($user->course_name == 'BSc in Engineering') selected @endif >BSc in Engineering</option>
+                        <option value="MSc in Engineering / MBA" @if ($user->course_name == 'MSc in Engineering / MBA') selected @endif >MSc in Engineering / MBA</option>
                     </select>
                 </div>
                 <div class="col-md-1"><label for="admission_date">Subject <span style="color: red;">*</span></label>
@@ -101,9 +100,8 @@
                 </div>
                 <div class="col-md-2">
                     <select name="course_status" id="" class="form-control required">
-                        <option value="{{ $user->course_status }}">{{ $user->course_status }}</option>
-                        <option>Complete</option>
-                        <option>Running</option>
+                        <option value="Complete" @if ($user->course_status == 'Complete') selected @endif >Complete</option>
+                        <option value="Running" @if ($user->course_status == 'Running') selected @endif >Running</option>
                     </select>
                 </div>
             </div>
@@ -111,9 +109,8 @@
             <div class="row form-group">
                 <div class="col-md-2"><label for="genderd">Gender <span style="color: red;">*</span></label></div>
                 <div class="col-md-4"> <select class="form-control" id="genderd" name="gender" required>
-                        <option value="{{ $user->gender }}">{{ $user->gender }}</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
+                        <option value="Male" @if ($user->gender == 'Male') selected @endif >Male</option>
+                        <option value="Female" @if ($user->gender == 'Female') selected @endif >Female</option>
                     </select></div>
                 <div class="col-md-2"><label for="date_of_birth">Date Of Birth</label></div>
                 <div class="col-md-4"><input class="form-control" name="dob" type="date" value="{{ Carbon\Carbon::parse($user->dob)->format('m/d/Y') }}"
@@ -168,11 +165,10 @@
                 </div>
                 <div class="col-md-4">
                     <select class="form-control" id="blood_group" name="religion">
-                        <option value="{{ $user->religion }}">{{ $user->religion }}</option>
-                        <option >Islam</option>
-                        <option >Hindusim</option>
-                        <option >Christian</option>
-                        <option>Buddhism</option>
+                        <option value="Islam" @if ($user->religion == 'Islam') selected @endif >Islam</option>
+                        <option value="Hindusim" @if ($user->religion == 'Hindusim') selected @endif >Hindusim</option>
+                        <option value="Christian" @if ($user->religion == 'Christian') selected @endif >Christian</option>
+                        <option value="Buddhism" @if ($user->religion == 'Buddhism') selected @endif >Buddhism</option>
                     </select>
                 </div>
             </div>
@@ -197,23 +193,19 @@
                 <div class="col-md-1"><label for="zip_code">District</label>
                 </div>
                 <div class="col-md-3">
-                    <select class="form-control" id="blood_group" name="district">
-                        <option value="{{ $user->district }}" >{{ $user->district }}</option>
-                        <option >Joypurhat</option>
-                        <option >Other</option>
-                    </select>
+                    <input class="form-control" name="district" type="text" value="{{ $user->district }}" disabled>
+
                 </div>
                 <div class="col-md-1"><label for="zip_code">Thana</label>
                 </div>
                 <div class="col-md-3">
                     <select class="form-control" id="blood_group" name="thana">
                         <option value="{{ $user->thana }}">{{ $user->thana }}</option>
-                        <option >Joypurhat Sadar</option>
-                        <option >Panchbibi</option>
-                        <option >Kalai</option>
-                        <option >Khetlal</option>
-                        <option >Akkelpur</option>
-                        <option >Other</option>
+                        <option value="Joypurhat Sadar" @if ($user->job_type == 'Joypurhat Sadar') selected @endif >Joypurhat Sadar</option>
+                        <option value="Panchbibi" @if ($user->job_type == 'Panchbibi') selected @endif >Panchbibi</option>
+                        <option value="Kalai" @if ($user->job_type == 'Kalai') selected @endif >Kalai</option>
+                        <option value="Khetlal" @if ($user->job_type == 'Khetlal') selected @endif >Khetlal</option>
+                        <option value="Akkelpur" @if ($user->job_type == 'Akkelpur') selected @endif >Akkelpur</option>
                     </select>
                 </div>
             </div>
@@ -225,10 +217,9 @@
                 </div>
                 <div class="col-md-3">
                     <select name="job_type" id="" class="form-control">
-                        <option value="{{ $user->job_type }}">{{ $user->job_type }}</option>
-                        <option>Govt</option>
-                        <option >Company</option>
-                        <option >Student</option>
+                        <option value="Govt" @if ($user->job_type == 'Govt') selected @endif >Govt</option>
+                        <option value="Company" @if ($user->job_type == 'Company') selected @endif >Company</option>
+                        <option value="Student" @if ($user->job_type == 'Student') selected @endif >Student</option>
                     </select>
                 </div>
                 <div class="col-md-1"><label for="email">Digination</label></div>
