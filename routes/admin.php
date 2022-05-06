@@ -1,13 +1,23 @@
 <?php
 
+use App\Http\Controllers\Admin\AdvisorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DeveloperController;
+use App\Http\Controllers\Admin\EternalController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\IntThanaController;
+use App\Http\Controllers\Admin\MemberController;
+use App\Http\Controllers\Admin\PMemberController;
+use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\SMemberController;
+use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\ThanaCommitteeController;
 use App\Http\Controllers\Admin\ThanaCommitteeTypeController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\VPMemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,8 +50,19 @@ Route::group(['prefix' => 'dashboard/', 'as' => 'admin.', 'middleware' => ['auth
 
     });
 
+    Route::resource('tag', TagController::class);
+    Route::resource('post', PostController::class);
     Route::resource('slider', SliderController::class);
     Route::resource('gallery', GalleryController::class);
+
+    Route::resource('president', PMemberController::class);
+    Route::resource('vice-president', VPMemberController::class);
+    Route::resource('secretary', SMemberController::class);
+    Route::resource('member', MemberController::class);
+    Route::resource('eternal', EternalController::class);
+    Route::resource('service', ServiceController::class);
+    Route::resource('advisor', AdvisorController::class);
+    Route::resource('developer', DeveloperController::class);
 
 
     Route::group(['prefix' => 'category/', 'as' => 'category.'], function () {

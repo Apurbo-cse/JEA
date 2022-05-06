@@ -1,7 +1,7 @@
 <div class="mobile-fixed-toolbar">
     <ul class="top-nav-mobile-left">
         <li style="width:50%;">
-            <a href=""><img src="{{asset('frontend/images/logo.png')}}" style="width:60px;padding-top:2px;"></a>
+            <a href="{{ url('/') }}"><img src="{{asset('frontend/images/logo.png')}}" style="width:60px;padding-top:2px;"></a>
         </li>
     </ul>
     <ul class="top-nav-mobile">
@@ -41,8 +41,8 @@
                 <div class="dropdown">
                     <a class="dropbtn" style="color:black;">Info</a>
                     <div class="dropdown-content">
-                        <a href="convening-member">Convening Member</a>
-                        <a href="developer">Developer Info</a>
+                        <a href="{{ url('convening-member') }}">Convening Member</a>
+                        <a href="{{ url('developer') }}">Developer Info</a>
 
                         <a  data-bs-toggle="collapse" href="#collapseExampleq" role="button" aria-expanded="false" aria-controls="collapseExample">
                            Thana Committee
@@ -60,7 +60,7 @@
             </li>
             <li><a href="{{ route('gallery') }}">Gallery</a></li>
             <li><a href="{{ route('blog') }}">Blog</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li><a href="{{ route('contact') }}">Contact</a></li>
 
             <!-- Authentication Links -->
             @guest
@@ -76,7 +76,7 @@
             <li>
                 <div class="dropdown">
                     <a class="LogInF mb-3">
-                        <img src="{{asset('frontend/images/logo.png')}}" class="ProImg" />&nbsp;{{ Auth::user()->name }}
+                        <img src="{{asset(Auth::user()->image)}}" class="ProImg" />&nbsp;{{ Auth::user()->name }}
                         {{-- <i class="fa fa-user" aria-hidden="true"></i> --}}
                     </a>
 
@@ -143,6 +143,13 @@
     .ml11 .letter {
         display: inline-block;
         line-height: 1em;
+    }
+    @media (max-width: 480px){
+
+        .header-middle form{
+            width: 95% !important;
+            margin-left: 20px;
+        }
     }
 
 </style>

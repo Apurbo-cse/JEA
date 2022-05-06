@@ -12,15 +12,37 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        $data['sliders'] = DB::table('sliders')->where('status', 'active')->limit(4)->get();
-        return view('frontend.home.index',$data);
+        $sliders = DB::table('sliders')->where('status', 'active')->limit(4)->get();
+        // $p_members = DB::table('p_members')->where('status', '1')->limit(1)->get();
+        $eternals = DB::table('eternals')->where('status', '1')->get();
+        $services = DB::table('services')->where('status', '1')->get();
+        $advisors = DB::table('advisors')->where('status', '1')->limit(4)->get();
+        return view('frontend.home.index',compact('sliders','eternals','services','advisors',
+        // 'p_members'
+    ));
     }
 
   //About Vie
   public function about()
   {
-    //   $data['galleries'] = DB::table('galleries')->where('status', 'active')->get();
-      return view('frontend.pages.about');
+
+    $advisors = DB::table('advisors')->where('status', '1')->get();
+      return view('frontend.pages.about',compact('advisors'));
+  }
+
+  public function contact()
+  {
+
+    // $advisors = DB::table('advisors')->where('status', '1')->get();
+      return view('frontend.pages.contact');
+  }
+
+
+  public function developer()
+  {
+
+    $developers = DB::table('developers')->where('status', '1')->limit(1)->get();
+      return view('frontend.pages.developer',compact('developers'));
   }
 
 
@@ -64,25 +86,30 @@ class FrontendController extends Controller
     // MSc Engineer View
     public function msc()
     {
-        return view('frontend.pages.engineers.msc');
+        // return view('frontend.pages.engineers.msc');
+        $users = DB::table('users')->whereIn('course_name', ['MSc in Engineering / MBA'])->get();
+        return view('frontend.pages.engineers.msc',compact('users'));
     }
 
     // BSC Engineer View
     public function bsc()
     {
-        return view('frontend.pages.engineers.bsc');
+        $users = DB::table('users')->whereIn('course_name', ['BSc in Engineering'])->get();
+        return view('frontend.pages.engineers.bsc',compact('users'));
     }
 
     // BSC Diploma Engineer View
     public function bsc_diploma()
     {
-        return view('frontend.pages.engineers.bsc_diploma');
+        $users = DB::table('users')->whereIn('course_name', ['BSc in Engineering (Diploma)'])->get();
+        return view('frontend.pages.engineers.bsc_diploma',compact('users'));
     }
 
     // Diploma Engineer View
     public function diploma()
     {
-        return view('frontend.pages.engineers.diploma');
+        $users = DB::table('users')->whereIn('course_name', ['Diploma in Engineering'])->get();
+        return view('frontend.pages.engineers.diploma',compact('users'));
     }
 
     // Gallery Vie
@@ -91,6 +118,17 @@ class FrontendController extends Controller
         $data['galleries'] = DB::table('galleries')->where('status', 'active')->get();
         return view('frontend.pages.gallery',$data);
     }
+
+
+    public function convening_member()
+    {
+        $p_members = DB::table('p_members')->where('status', '1')->limit(1)->get();
+        $v_p_members = DB::table('v_p_members')->where('status', '1')->limit(1)->get();
+        $s_members = DB::table('s_members')->where('status', '1')->limit(1)->get();
+        $members = DB::table('members')->where('status', '1')->get();
+        return view('frontend.pages.member.index',compact('p_members','v_p_members','s_members','members'));
+    }
+
 
     // User Profile
     // public function profile()

@@ -21,6 +21,8 @@
 
     <!--  Service --->
     <link href="{{asset('frontend/services.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/user.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/pre.css')}}" rel="stylesheet">
 
     <!--  FlipCard --->
     <link href="{{asset('frontend/flipcard.css')}}" rel="stylesheet">
@@ -50,6 +52,12 @@
        <link href="{{asset('frontend/blogtest.css')}}" rel="stylesheet">
 
        <link href="{{asset('frontend/texts.css')}}" rel="stylesheet">
+
+       <link rel="stylesheet" href="{{ asset('frontend/profile.css') }}">
+       <link rel="stylesheet" href="{{ asset('frontend/contact.css') }}">
+        <link rel="stylesheet" href="assets/css/font-awesome.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
 
     <!--=============== REMIXICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">

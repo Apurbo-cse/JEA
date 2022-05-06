@@ -193,7 +193,7 @@
                 <div class="col-md-1"><label for="zip_code">District</label>
                 </div>
                 <div class="col-md-3">
-                    <input class="form-control" name="district" type="text" value="{{ $user->district }}" disabled>
+                    <input class="form-control" name="district" type="text" value="Joypurhat" disabled>
 
                 </div>
                 <div class="col-md-1"><label for="zip_code">Thana</label>
@@ -230,7 +230,72 @@
                 <div class="col-md-3"><input class="form-control" name="job_work" type="text" value="{{ $user->job_work }}" id="email">
                 </div>
             </div>
+
+            <!-- ======= Counts ======= -->
+        <div class="counts container">
+
+            <div class="row">
+                <div class="sectionn-title" style="margin-bottom:20px;">
+                    <h2 style="font-size: 20px">Education</h2>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                    <div class="count-box">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <b style="color:white;font-size:12px;">HSC</b>
+
+                        <input type="text" name="hsc_group" class="mt-2 Pls" value="{{ $user->hsc_group}}" placeholder="Enter Subject">
+                        <input type="text" name="hsc_institute" class="mt-2 Pls" value="{{$user->hsc_institute }}" placeholder="Enter Institu">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                    <div class="count-box">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <b style="color:white;font-size:12px;">Diploma in Engineering</b>
+
+                        <input type="text" name="diploma_subject" class="mt-2 Pls" value="{{$user->diploma_subject }}" placeholder="Enter Institu">
+                        <input type="text" name="diploma_institute" class="mt-2 Pls" value="{{$user->diploma_institute }}" placeholder="Enter Institu">
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                    <div class="count-box">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <b style="color:white;font-size:12px;">BSc in Engineering</b>
+
+                        <input type="text" name="bsc_subject" class="mt-2 Pls" value="{{ $user->bsc_subject}}" placeholder="Enter Subject">
+                        <input type="text" name="bsc_institute" class="mt-2 Pls" value="{{$user->bsc_institute }}" placeholder="Enter Institu">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                    <div class="count-box">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <b style="color:white;font-size:12px;">MSc in Engineering</b>
+
+                        <input type="text" name="msc_subject" class="mt-2 Pls" value="{{ $user->msc_subject}}" placeholder="Enter Subject">
+                        <input type="text" name="msc_institute" class="mt-2 Pls" value="{{$user->msc_institute }}" placeholder="Enter Institu">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-5 md-lg-0">
+                    <div class="count-box">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <b style="color:white;font-size:12px;">EMBA / MBA</b>
+
+                        <input type="text" name="mba_subject" class="mt-2 Pls" value="{{ $user->mba_subject}}" placeholder="Enter Subject">
+                        <input type="text" name="mba_institute" class="mt-2 Pls" value="{{$user->mba_institute }}" placeholder="Enter Institu">
+                    </div>
+                </div>
+
+            </div>
+
+        </div><!-- End Counts -->
+
+
             <br>
+
 
             <center>
                 <button class="btn bg-warning px-5" type="reset">Clear</button>
@@ -252,5 +317,11 @@
 <button type="submit" class="btn-success">submit</button>
 </form>
 </div> --}}
+<style>
+    .Pls::placeholder{
+        font-size: 12px;
+        padding-left: 5px;
+    }
+</style>
 
 @endsection

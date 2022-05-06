@@ -26,10 +26,18 @@ class ProfileController extends Controller
         return view('frontend.pages.profile.profileEdit', compact('user'));
     }
 
-    public function profileIndex(){
-        $user = Auth::user();
+    public function profileIndex($id)
+    {
+        $user=User::findOrFail($id);
         return view('frontend.pages.profile.profileIndex', compact('user'));
     }
+    // public function detailes($id)
+    // {
+
+    //     $user=User::findOrFail($id);
+    //     $data['user']=$user;
+    //     return view('frontend.user.detailes',$data);
+    // }
     public function profileUpdate(Request $request){
     //    dd($request->all());
         $user = Auth::user();

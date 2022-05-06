@@ -45,9 +45,11 @@ Route::group(['prefix'=>'thana-committee'], function (){
 });
 
 
+Route::get('convening-member',[FrontendController::class, 'convening_member'])->name('convening_member');
 
 // Blog View
     Route::get('blog',[BlogController::class, 'blog'])->name('blog');
+    Route::get('blog/details/{slug}',[BlogController::class, 'details'])->name('blog.details');
 
 
 // Route::group(['prefix'=>'profile'], function (){
@@ -56,6 +58,16 @@ Route::group(['prefix'=>'thana-committee'], function (){
 
 
 Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
+
+
+Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
+
+Route::get('/developer', [FrontendController::class, 'developer'])->name('developer');
+
+Route::get('/user/{id}', [ProfileController::class, 'profileIndex'])->name('profileIndex ');
+// Route::get('profile/{id}','ProfileController@index')->name('index');
+
+
 
 
 Route::group(['prefix' => '/', 'as' => 'web.', 'middleware' => ['auth']], function () {

@@ -9,14 +9,6 @@
 
 <br><br><br><br><br>
 
-<div class="container">
-    <form action="{{route('web.profileUpdate')}}" method="POST" enctype="multipart/form-data">
-        @csrf
-        <input type="text" class="bg-dark" name="name" value="{{ $user->name }}">
-        <input type="text" class="bg-dark" name="last_name" id="" value="{{ $user->last_name }}">
-        <button type="submit" class="btn-success">submit</button>
-    </form>
-</div>
     <!-- ======= About Sectionn ======= -->
     <section id="about" style="margin-top:30px;">
 
@@ -25,7 +17,7 @@
         <div class="about-me container">
 
             <div class="sectionn-title">
-                <h2>Hello!!! I'm</h2>
+                <h2 style="font-size: 20px">Hello!!! I'm</h2>
                 <p style="color:#007B98;font-size:25px;">{{ $user->name}} {{ $user->last_name}}</p>
             </div>
 
@@ -33,10 +25,10 @@
                 <div class="col-lg-4" data-aos="fade-right">
                     <img src="{{asset($user->image)}}" class="img-fluid object-fit" alt=""
                         style="height:350px; width:330px; "> <br> <br>
-                         <a href="{{ route('web.profileEdit') }}" class="btn text-dark border-dark p-2">Edit Profile</a>
+                         <a href="{{ route('web.profileEdit') }}" style="background-color:#174044;font-size:13px;color:white" class="btn px-4 ">Edit Profile</a>
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                    <h3 style="color:#DE3163;font-size:18px;">{{ $user->job_digination }}</h3>
+                    <h3 style="color:#0a6c9a;font-size:18px;">{{ $user->job_designation  }}</h3>
                     <br>
                     <p class="font-italic" style="color:#CCCCFF;font-size:12px;text-align:justify;">
                        {{ $user->description }}
@@ -48,7 +40,7 @@
                             <ul>
                                 <li><i class="icofont-rounded-right"></i> <strong
                                         style="color:#174044;font-size:13px;">Qualification : </strong> <b
-                                        style="color:#174044;font-size:13px;">{{ $user->job_designation }} <small
+                                        style="color:#174044;font-size:13px;">{{ $user->course_name }} <small
                                             style="font-size:7px;color:#581845;">{{ $user->course_status }}</small>
                                     </b></li>
                                 <li><i class="icofont-rounded-right"></i> <strong
@@ -82,9 +74,7 @@
 
                     </div>
                     <br>
-                    <p style="color:gray;font-size:12px;text-align:justify;">
-                        {{ $user->description }}
-                    </p>
+
 
                     <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
                         <li><a target="_blank" href="{{ $user->facebook }}" class="facebook">
@@ -124,7 +114,7 @@
 
             <div class="row">
                 <div class="sectionn-title" style="margin-bottom:20px;">
-                    <h2>Education</h2>
+                    <h2 style="font-size: 20px">Education</h2>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
@@ -189,18 +179,18 @@
 
 
         <!-- ======= Interests ======= -->
-        <div class="interests container">
+        <div class="interests container mt-5">
 
             <div class="sectionn-title" style="margin-bottom:20px;">
-                <h2>Parents Name</h2>
+                <h2 style="font-size: 20px">Parents Name</h2>
             </div>
 
-            <div class="col-md-4 mb-3" style="font-size:14px;font-weight:600;">
+            <div class="col-md-4 mb-3" style="font-size:14px;font-weight:600;color:#174044">
                 <label style="font-size:14px;font-weight:400;" for="validationServer01">Father Name</label> :
                 {{ $user->father_name}}
             </div>
 
-            <div class="col-md-4 mb-3" style="font-size:14px;font-weight:600;">
+            <div class="col-md-4 mb-3" style="font-size:14px;font-weight:600;color:#174044">
                 <label style="font-size:14px;font-weight:400;" for="validationServer02">Mother Name</label> :
                 {{ $user->mother_name }}
             </div>
@@ -210,18 +200,18 @@
 
 
         <!-- ======= Interests ======= -->
-        <div class="interests container">
+        <div class="interests container mt-5">
 
             <div class="sectionn-title" style="margin-bottom:20px;">
-                <h2>Address</h2>
+                <h2 style="font-size: 20px">Address</h2>
             </div>
 
-            <div class="col-md-4 mb-3" style="font-size:14px;font-weight:600;">
+            <div class="col-md-4 mb-3" style="font-size:14px;font-weight:600;color:#174044">
                 <label style="font-size:14px;font-weight:400;" for="validationServer01">Present Address</label> :
                 {{ $user->present_add }}
             </div>
 
-            <div class="col-md-4 mb-3" style="font-size:14px;font-weight:600;">
+            <div class="col-md-4 mb-3" style="font-size:14px;font-weight:600;color:#174044">
                 <label style="font-size:14px;font-weight:400;" for="validationServer02">Permanent Address</label> :
                 {{ $user->permanent_add }}
             </div>
@@ -230,28 +220,28 @@
         <!-- End Interests -->
 
         <!-- ======= Interests ======= -->
-        <div class="interests container">
+        <div class="interests container mt-5">
 
             <div class="sectionn-title" style="margin-bottom:20px;">
-                <h2>Others</h2>
+                <h2 style="font-size: 20px">Others</h2>
             </div>
 
-            <div class="col-md-3 mb-3" style="font-size:14px;font-weight:600;">
+            <div class="col-md-3 mb-3" style="font-size:14px;font-weight:600;color:#174044">
                 <label style="font-size:14px;font-weight:400;" for="validationServer01">Alternate Phone</label> :
                 {{ $user->phone }}
             </div>
 
-            <div class="col-md-3 mb-3" style="font-size:14px;font-weight:600;">
+            <div class="col-md-3 mb-3" style="font-size:14px;font-weight:600;color:#174044">
                 <label style="font-size:14px;font-weight:400;" for="validationServer01">NID</label> :
                 {{ $user->nid }}
             </div>
 
-            <div class="col-md-3 mb-3" style="font-size:14px;font-weight:600;">
+            <div class="col-md-3 mb-3" style="font-size:14px;font-weight:600;color:#174044">
                 <label style="font-size:14px;font-weight:400;" for="validationServer02">Religion</label> :
                 {{ $user->religion }}
             </div>
 
-            <div class="col-md-3 mb-3" style="font-size:14px;font-weight:600;">
+            <div class="col-md-3 mb-3" style="font-size:14px;font-weight:600;color:#174044">
                 <label style="font-size:14px;font-weight:400;" for="validationServer02">Blood Group</label> :
                 {{ $user->blood }}
             </div>

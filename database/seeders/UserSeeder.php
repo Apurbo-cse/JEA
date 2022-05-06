@@ -17,18 +17,18 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'Mr. admin',
-            'email' => 'admin@gmail.com',
+            'email' => 'apurboka@gmail.com',
             'phone' => '01408137111',
             'password' => Hash::make('12345'),
             'user_type' => 'admin',
         ]);
 
-        User::create([
-            'name' => 'Mr. user',
-            'email' => 'user@gmail.com',
-            'phone' => '01732955937',
-            'password' => Hash::make('12345'),
-            'user_type' => '',
-        ]);
+        // User::create([
+        //     'name' => 'Mr. user',
+        //     'email' => 'user@gmail.com',
+        //     'phone' => '01732955937',
+        //     'password' => Hash::make('12345'),
+        //     'user_type' => '',
+        // ]);
     }
 }

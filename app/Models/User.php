@@ -31,15 +31,15 @@ class User extends Authenticatable
 
         'job_type','job_designation','job_work',
 
-        'hsc_institute','hsc_status','hsc_passing_year',
+        'hsc_group','hsc_institute','hsc_status','hsc_passing_year',
 
-        'diploma_institute','diploma_status','diploma_passing_year',
+        'diploma_subject', 'diploma_institute','diploma_status','diploma_passing_year',
 
-        'bsc_institute','bsc_status','bsc_passing_year',
+        'bsc_subject','bsc_institute','bsc_status','bsc_passing_year',
 
-        'msc_institute','msc_status','msc_passing_year',
+        'msc_subject','msc_institute','msc_status','msc_passing_year',
 
-        'mba_institute','mba_status','mba_passing_year',
+        'mba_subject','mba_institute','mba_status','mba_passing_year',
 
 
         'father_name','mother_name',

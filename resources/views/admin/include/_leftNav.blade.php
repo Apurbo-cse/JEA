@@ -27,6 +27,25 @@
                     <li><a href="#">Create New User</a></li>
                 </ul>
             </li>
+
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"><i class="ti-user"></i> <span> Member </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                <ul class="list-unstyled">
+                    <li><a href="{{ route('admin.president.index') }}">President</a></li>
+                    <li><a href="{{ route('admin.vice-president.index') }}">Vice President</a></li>
+                    <li><a href="{{ route('admin.secretary.index') }}">Seretary</a></li>
+                    <li><a href="{{ route('admin.member.index') }}">Member</a></li>
+                </ul>
+            </li>
+
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"><i class="ti-video-camera"></i> <span> Eternal </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                <ul class="list-unstyled">
+                    <li><a href="{{route('admin.eternal.index')}}">Eternal List</a></li>
+                    <li><a href="{{route('admin.eternal.create')}}">Create New Eternal</a></li>
+                </ul>
+            </li>
+
             <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-video-camera"></i> <span> Video </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
                 <ul class="list-unstyled">
@@ -35,6 +54,24 @@
                 </ul>
             </li>
 
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-sliders"></i> <span>Post</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                <ul class="list-unstyled">
+                    <li><a href="{{ route ('admin.post.index') }}">post List</a></li>
+                    <li><a href="{{ route('admin.post.create') }}">Create New post</a></li>
+                    {{-- {{ route('admin.category.index') }} --}}
+                </ul>
+            </li>
+
+
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-sliders"></i> <span>Tag</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                <ul class="list-unstyled">
+                    <li><a href="{{ route ('admin.tag.index') }}">Tag List</a></li>
+                    <li><a href="{{ route('admin.tag.create') }}">Create New Tag</a></li>
+                    {{-- {{ route('admin.category.index') }} --}}
+                </ul>
+            </li>
 
             <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-sliders"></i> <span>Slider</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
@@ -75,28 +112,12 @@
             </li>
 
 
-            <li class="has_sub">
-                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-tag"></i> <span>Tag</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
-                <ul class="list-unstyled">
-                    {{-- <li><a href="{{route('tag.index')}}">Tag List</a></li>
-                    <li><a href="{{route('tag.create')}}">Create New Tag</a></li> --}}
-                </ul>
-            </li>
-
-            <li class="has_sub">
-                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-newspaper-o"></i> <span>Post</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
-                <ul class="list-unstyled">
-                    {{-- <li><a href="{{route('post.index')}}">post List</a></li>
-                    <li><a href="{{route('post.create')}}">Create New post</a></li> --}}
-                </ul>
-            </li>
-
 
             <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-newspaper-o"></i> <span>Service</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
                 <ul class="list-unstyled">
-                    {{-- <li><a href="{{route('service.index')}}">Service List</a></li>
-                    <li><a href="{{route('service.create')}}">Create New Service</a></li> --}}
+                    <li><a href="{{route('admin.service.index')}}">Service List</a></li>
+                    <li><a href="{{route('admin.service.create')}}">Create New Service</a></li>
                 </ul>
             </li>
 
@@ -119,10 +140,12 @@
                     <li><a href="{{route('admin.gallery.create')}}">Create New Gallery</a></li>
                 </ul>
             </li>
+
             <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-image"></i> <span> Developer </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
                 <ul class="list-unstyled">
-                    {{-- <li><a href="{{route('developer.index')}}">Developer profile</a></li> --}}
+                    <li><a href="{{route('admin.developer.index')}}">Developer List</a></li>
+                    <li><a href="{{route('admin.developer.create')}}">Create New developer</a></li>
                 </ul>
             </li>
 

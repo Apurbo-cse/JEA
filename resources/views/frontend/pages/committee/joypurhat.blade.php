@@ -24,11 +24,11 @@
                 </div>
 
                 <div class="row justify-content-between Thak_Border_top">
-                    <small class="col-md-6">
+                    <small class="col-md-6 text-gray-100 text-dark">
                         Source : {{ $thana->source }}
                     </small>
-                    <small class="col-md-6 date_Thak text-end ">
-                        Date : {{ $thana->created_at->format('d/m/Y') }}
+                    <small class="col-md-6 date_Thak text-gray-100 text-dark text-end ">
+                        Date : {{date('M d, Y', strtotime($thana->created_at))}}
                     </small>
                 </div>
                 <div class="row mt-3">
@@ -41,7 +41,7 @@
                 <div class="row justify-content-center mt-4 text-center">
                     @foreach ($thana_committees as $thana)
                         <div class="col-md-3">
-                            <div class="mt-5 mb-3">
+                            <div class="mt-5 mb-3 text-gray-100 text-dark">
                                 <img src="{{ asset($thana->image) }}" class="ImgThak" alt="">
                                 <p>Engr. {{ $thana->name }}</p>
                                 <small>Department : {{ $thana->department }}</small>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -9,8 +10,23 @@ class BlogController extends Controller
 
   public function blog()
   {
-    //   $data['galleries'] = DB::table('galleries')->where('status', 'active')->get();
-      return view('frontend.pages.blog.blog');
+
+    $data['latest_news']=Post::where('status', 'active')->orderBy('id', 'desc')->limit(3)->get();
+    $data['posts']=Post::where('status', 'active')->orderBy('id', 'desc')->paginate(5);
+    $data['popular_posts']=Post::where('status', 'active')->orderBy('view_count', 'desc')->limit(3)->get();
+    return view('frontend.pages.blog.index',$data);
+
   }
+
+  public function details($id){
+
+    $data['latest_news']=Post::where('status', 'active')->orderBy('id', 'desc')->limit(3)->get();
+    $data['popular_posts']=Post::where('status', 'active')->orderBy('view_count', 'desc')->limit(3)->get();
+    // $post=Post::findOrFail($id);
+    $post=Post::findOrFail($id);
+    $post->increment('view_count');
+    $data['post']=$post;
+    return view('frontend.pages.blog.details', $data);
+}
 
 }
