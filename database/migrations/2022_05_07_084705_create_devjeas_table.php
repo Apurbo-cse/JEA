@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDevelopersTable extends Migration
+class CreateDevjeasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDevelopersTable extends Migration
      */
     public function up()
     {
-        Schema::create('developers', function (Blueprint $table) {
+        Schema::create('devjeas', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('designation');
@@ -29,7 +29,9 @@ class CreateDevelopersTable extends Migration
             $table->string('linkedin');
 
             $table->string('image');
+
             $table->string('status');
+
             $table->timestamps();
         });
     }
@@ -41,6 +43,6 @@ class CreateDevelopersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('developers');
+        Schema::dropIfExists('devjeas');
     }
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Developer;
+use App\Models\Devjea;
 use Illuminate\Http\Request;
 
 class DeveloperController extends Controller
@@ -15,7 +15,7 @@ class DeveloperController extends Controller
      */
     public function index()
     {
-       $developers= Developer::orderBy('created_at', 'ASC')->paginate(20);
+       $developers= Devjea::orderBy('created_at', 'ASC')->paginate(20);
         return view('admin.pages.developer.index',compact('developers'));
     }
 
@@ -37,7 +37,7 @@ class DeveloperController extends Controller
      */
     public function store(Request $request)
    {
-        $developer =new Developer();
+        $developer =new Devjea();
 
         $developer->name = $request->input('name');
         $developer->designation = $request->input('designation');
@@ -61,7 +61,7 @@ class DeveloperController extends Controller
 
         $request->validate([
             'name'=>'required',
-            'status'=>'required|in:'.Developer::ACTIVE_STATUS.','.Developer::INACTIVE_STATUS,
+            'status'=>'required|in:'.Devjea::ACTIVE_STATUS.','.Devjea::INACTIVE_STATUS,
             // 'image' => 'required|image|mimes:jpeg,png,jpg,JPEG,PNG,JPG|max:2048',
         ]);
 
@@ -89,7 +89,7 @@ class DeveloperController extends Controller
      */
     public function edit($id)
     {
-        $developer = Developer::findOrFail($id);
+        $developer = Devjea::findOrFail($id);
         return view('admin.pages.developer.edit',compact('developer'));
     }
 
@@ -102,7 +102,7 @@ class DeveloperController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $developer = Developer::findOrFail($id);
+        $developer = Devjea::findOrFail($id);
         $developer->name = $request->input('name');
         $developer->designation = $request->input('designation');
         $developer->job = $request->input('job');
@@ -123,7 +123,7 @@ class DeveloperController extends Controller
 
         $request->validate([
             'name'=>'required',
-            'status'=>'required|in:'.Developer::ACTIVE_STATUS.','.Developer::INACTIVE_STATUS,
+            'status'=>'required|in:'.Devjea::ACTIVE_STATUS.','.Devjea::INACTIVE_STATUS,
 
         ]);
 
@@ -141,7 +141,7 @@ class DeveloperController extends Controller
     public function destroy($id)
     {
 
-        $developer = Developer::findOrFail($id);
+        $developer = Devjea::findOrFail($id);
         if($developer){
             if(file_exists(($developer->image))){
                 unlink($developer->image);
