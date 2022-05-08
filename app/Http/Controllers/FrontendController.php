@@ -41,8 +41,8 @@ class FrontendController extends Controller
   public function developer()
   {
 
-    $developers = DB::table('developers')->where('status', '1')->limit(1)->get();
-      return view('frontend.pages.developer',compact('developers'));
+    $devjeas = DB::table('devjeas')->where('status', '1')->limit(1)->get();
+      return view('frontend.pages.developer',compact('devjeas'));
   }
 
 

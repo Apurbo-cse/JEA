@@ -58,7 +58,7 @@
                         </thead>
 
                         <tbody>
-                        @foreach($developers as $developer)
+                        @foreach($devjeas as $developer)
                             <tr>
                                 <td>{{$developer->id}}</td>
                                 <td>{{$developer->name}}</td>

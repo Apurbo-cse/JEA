@@ -10,7 +10,7 @@
 
     <div id="supervisor">
 
-@foreach ($developers as $developer )
+@foreach ($devjeas as $developer )
 <div class="supervisor cons">
 
     <div class="col-left">
