@@ -27,7 +27,7 @@ Joypurhat Engineers Association
                     <img src="{{asset('frontend/images/logo.png')}}" alt="" style="width:70px;height:70px;">
                     <span class="text-wrapper">
                         <span class="line line1"></span>
-                        <span class="letters">Joypurhat Engineers Association</span>
+                        <span class="letters">Joypurhat Engineer's Association</span>
                     </span>
                 </h1>
             </div>
@@ -256,18 +256,18 @@ Joypurhat Engineers Association
 
 </div> --}}
 
-<section class="services my-5">
+<section class="services mt-5 bgd">
     <div class="container">
         <div class="services-title">
             <div class="title">
-                <h2 style="border-bottom: 2px solid rgb(3, 48, 107)"><span> Our </span> Services</h2>
+                <h2 class="text-light"><span> Our </span> Services</h2>
             </div>
         </div>
 
         <div class="services-box">
 
            @foreach ( $services as $service )
-           <div class="box">
+           <div class="box mb-5">
             <div class="ser-box">
                 <div class="icon">
                     <img src="{{ asset('frontend/img/setting.p')}}ng">
@@ -283,7 +283,7 @@ Joypurhat Engineers Association
 </section>
 
 
-<div  style="background-color: rgb(194, 198, 201) " class="mt-4 p-4">
+<div  style="background-color: rgb(194, 198, 201) " class=" p-4">
    <div class="justify-content-center d-flex">
     <div class="col-md-3 ">
         <h2 class="text-center text-bold text-light" style="border-bottom: 2px solid white">Advisor</h4>
@@ -311,115 +311,10 @@ Joypurhat Engineers Association
 
 </section>
 </div>
+<style>
+    .bgd{
+        background: linear-gradient(90deg, rgba(0,0,36,0.9531162806919643) 0%, rgba(2, 64, 64, 0.939) 100%);
+    }
 
-<!-- Flip Card Start -->
-{{-- <section class="Modules about-container">
-    <div class="container py-5 ">
-
-        <h2>JEA | Modules</h2>
-        <div class="row">
-
-            <div class="col-md-3 my-3">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-body ">
-                                <div class="text-center mt-4">
-                                    <h1 class="fw-bold infoText">1</h1>
-                                </div>
-                                <p class="text-center mb-3 infoText">Employer</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="text-center mt-3">
-                                <h6 class="fw-bold ">Employer</h6>
-                            </div>
-                            <p class="text-center px-1"> Employer can do most of the process except ground handling at
-                                airport and
-                                quarantine</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</section> --}}
-<!-- Flip Card End -->
-
-
-
+</style>
 @endsection
-
-{{-- <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Testimonial</title>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-</head>
-<body>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8 d-flex justify-content-center">
-            <div id="testimonial-slider" class="owl-carousel">
-
-                <div class="testimonial">
-                    <div class="pic">
-                        <img src="http://www.markharwood.plus.com/images/people%20large/people8.jpg" alt="" class="img-responsive">
-                    </div>
-                    <h3 class="testimonial-info">
-                        Diana
-                        <small>Web Designer</small>
-                    </h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis.</p>
-                </div>
-
-                <div class="testimonial">
-                    <div class="pic">
-                        <img src="https://static.pexels.com/photos/529928/pexels-photo-529928.jpeg" alt="" class="img-responsive">
-                    </div>
-                    <h3 class="testimonial-info">
-                        krystal
-                        <small>Web Developer</small>
-                    </h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis.</p>
-                </div>
-
-                <div class="testimonial">
-                    <div class="pic">
-                        <img src="http://www.markharwood.plus.com/images/people%20large/people8.jpg" alt="" class="img-responsive">
-                    </div>
-                    <h3 class="testimonial-info">
-                        Diana
-                        <small>Web Designer</small>
-                    </h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $("#testimonial-slider").owlCarousel({
-            items:1,
-            itemsDesktop:[1000,1],
-            itemsDesktopSmall:[979,1],
-            itemsTablet:[768,1],
-            pagination:true,
-            navigation:false,
-            navigationText:["",""],
-            slideSpeed:500,
-            singleItem:true,
-            autoPlay:true
-        });
-    });
-</script>
-</body>
-</html> --}}

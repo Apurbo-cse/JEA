@@ -122,9 +122,9 @@ class FrontendController extends Controller
 
     public function convening_member()
     {
-        $p_members = DB::table('p_members')->where('status', '1')->limit(1)->get();
-        $v_p_members = DB::table('v_p_members')->where('status', '1')->limit(1)->get();
-        $s_members = DB::table('s_members')->where('status', '1')->limit(1)->get();
+        $p_members = DB::table('p_members')->where('status', '1')->orderBy('id', 'desc')->limit(1)->get();
+        $v_p_members = DB::table('v_p_members')->where('status', '1')->orderBy('id', 'desc')->limit(1)->get();
+        $s_members = DB::table('s_members')->where('status', '1')->orderBy('id', 'desc')->limit(1)->get();
         $members = DB::table('members')->where('status', '1')->get();
         return view('frontend.pages.member.index',compact('p_members','v_p_members','s_members','members'));
     }

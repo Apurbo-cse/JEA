@@ -13,6 +13,11 @@ class Gallery extends Model
         'title',
         'description',
         'status',
+        'published_at',
         'image',
+    ];
+
+    protected $dates = [
+        'published_at',
     ];
 }

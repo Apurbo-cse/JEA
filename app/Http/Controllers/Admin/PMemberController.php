@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\PMember;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class PMemberController extends Controller
 {
@@ -15,8 +16,9 @@ class PMemberController extends Controller
      */
     public function index()
     {
-       $p_members= PMember::orderBy('created_at', 'ASC')->paginate(20);
-        return view('admin.pages.president.index',compact('p_members'));
+       $data['p_members']= PMember::orderBy('created_at', 'DESC')->paginate(20);
+       $data['serial'] = 1;
+        return view('admin.pages.president.index',$data);
     }
 
     /**
@@ -37,13 +39,14 @@ class PMemberController extends Controller
      */
     public function store(Request $request)
    {
-        $president =new PMember();
+        $data =new PMember();
 
-        $president->name = $request->input('name');
-        $president->designation = $request->input('designation');
-        $president->job = $request->input('job');
-        $president->job_location = $request->input('job_location');
-        $president->status = $request->input('status');
+        $data->name = $request->input('name');
+        $data->designation = $request->input('designation');
+        $data->job = $request->input('job');
+        $data->job_location = $request->input('job_location');
+        $data->status = $request->input('status');
+        $slider['published_at'] = Carbon::now();
 
         if($request->hasfile('image'))
         {
@@ -51,7 +54,7 @@ class PMemberController extends Controller
             $path ='images/member';
             $file_name = time() . $file->getClientOriginalName();
             $file->move($path, $file_name);
-            $president['image']= $path.'/'. $file_name;
+            $data['image']= $path.'/'. $file_name;
         }
 
         $request->validate([
@@ -60,7 +63,7 @@ class PMemberController extends Controller
             // 'image' => 'required|image|mimes:jpeg,png,jpg,JPEG,PNG,JPG|max:2048',
         ]);
 
-        $president->save();
+        $data->save();
         session()->flash('success', 'Member Created Successfully');
         return redirect()->route('admin.president.index');
     }
@@ -85,6 +88,7 @@ class PMemberController extends Controller
     public function edit($id)
     {
         $president = PMember::findOrFail($id);
+
         return view('admin.pages.president.edit',compact('president'));
     }
 
@@ -116,7 +120,7 @@ class PMemberController extends Controller
         $request->validate([
             'name'=>'required',
             'status'=>'required|in:'.PMember::ACTIVE_STATUS.','.PMember::INACTIVE_STATUS,
-            
+
         ]);
 
         $president->save();

@@ -19,6 +19,7 @@ class CreatePMembersTable extends Migration
             $table->string('designation');
             $table->string('job');
             $table->string('job_location');
+            $table->timestamp('published_at')->nullable();
             $table->string('image');
             $table->string('status');
             $table->timestamps();

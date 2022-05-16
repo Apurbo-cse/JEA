@@ -52,13 +52,22 @@ class PostController extends Controller
         ]);
 
 
-        if ($request->hasFile('image')){
+        // if ($request->hasFile('image')){
+        //     $file = $request->file('image');
+        //     $path ='images/posts';
+        //     $file_name = time() . $file->getClientOriginalName();
+        //     $file->move($path, $file_name);
+        //     $data['image']= $path.'/'. $file_name;
+
+        // }
+        
+        if($request->hasfile('image'))
+        {
             $file = $request->file('image');
             $path ='images/posts';
             $file_name = time() . $file->getClientOriginalName();
             $file->move($path, $file_name);
             $data['image']= $path.'/'. $file_name;
-
         }
 
 

@@ -7,7 +7,7 @@
     <div style="width: 100%;height:50px ; background: rgb(6, 100, 121)">
     </div>
     <br><br>
-    
+
 
     <div class="auto-container">
         <div class="row clearfix">

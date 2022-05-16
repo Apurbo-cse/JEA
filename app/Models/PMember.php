@@ -15,6 +15,10 @@ class PMember extends Model
         'job',
         'job_location',
         'image',
+        'published_at',
         'status',
+    ];
+    protected $dates = [
+        'published_at',
     ];
 }

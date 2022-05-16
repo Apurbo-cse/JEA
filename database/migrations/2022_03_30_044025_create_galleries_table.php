@@ -19,6 +19,7 @@ class CreateGalleriesTable extends Migration
             $table->longText('description');
             $table->string('image');
             $table->enum('status', ['active', 'inactive']);
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
     }

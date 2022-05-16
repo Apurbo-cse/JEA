@@ -39,20 +39,20 @@
                             <th class="text-center" >Title</th>
                             <th class="text-center " >Description</th>
                             <th class="text-center" >Status</th>
-                            <th class="text-center" >time</th>
+                            <th class="text-center" >Time</th>
                             <th class="text-center" style="40%" >Image</th>
                             <th class="text-center" style="width: 12%">Actions</th>
                         </tr>
                         </thead>
 
                         <tbody>
-                        @foreach($galleries as $gallery)
+                        @foreach( $galleries as $gallery)
                             <tr>
-                                <td>{{$gallery->id}}</td>
+                                <td>{{$serial++ }}</td>
                                 <td>{{$gallery->title}}</td>
                                 <td>{{$gallery->description}}</td>
                                 <td>{{ucfirst($gallery->status)}}</td>
-                                <td>{{ date('H', strtotime($gallery->create_at)) }}</td>
+                                <td>{{$gallery->published_at->format('d M, Y')}}</td>
                                 <td class="text-center">
                                     <div style="width:110px; height:90px;overflow:hidden">
                                         <img src="{{ asset($gallery->image) }}" style="width:100px; height:80px;overflow:hidden" class="" alt="">

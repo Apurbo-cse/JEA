@@ -17,5 +17,9 @@ class Slider extends Model
         'description',
         'status',
         'image',
+        'published_at',
+    ];
+    protected $dates = [
+        'published_at',
     ];
 }

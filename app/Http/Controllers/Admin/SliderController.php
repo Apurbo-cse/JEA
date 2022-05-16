@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Slider;
+use Carbon\Carbon;
+use Illuminate\Support\Str;
 class SliderController extends Controller
 {
     /**
@@ -16,7 +18,8 @@ class SliderController extends Controller
     {
 
         $sliders = Slider::orderBy('created_at', 'DESC')->paginate(20);
-        return view('admin.slider.index',compact('sliders'));
+        $data['serial'] = 1;
+        return view('admin.slider.index',$data,compact('sliders'));
 
     }
 
@@ -43,6 +46,7 @@ class SliderController extends Controller
         $slider->title = $request->input('title');
         $slider->description = $request->input('description');
         $slider->status = $request->input('status');
+        $slider['published_at'] = Carbon::now();
 
 
 
@@ -103,7 +107,6 @@ class SliderController extends Controller
         $slider->title = $request->input('title');
         $slider->description = $request->input('description');
         $slider->status = $request->input('status');
-
 
 
         if($request->hasfile('image'))

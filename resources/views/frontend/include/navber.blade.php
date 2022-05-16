@@ -1,7 +1,8 @@
 <div class="mobile-fixed-toolbar">
     <ul class="top-nav-mobile-left">
         <li style="width:50%;">
-            <a href="{{ url('/') }}"><img src="{{asset('frontend/images/logo.png')}}" style="width:60px;padding-top:2px;"></a>
+            <a href="{{ url('/') }}"><img src="{{asset('frontend/images/logo.png')}}"
+                    style="width:60px;padding-top:2px;"></a>
         </li>
     </ul>
     <ul class="top-nav-mobile">
@@ -16,7 +17,8 @@
         font-weight: 600px;
         font-size: 14px;
     }
-    .clearfixX{
+
+    .clearfixX {
         list-style: none !important;
     }
 
@@ -41,19 +43,22 @@
                 <div class="dropdown">
                     <a class="dropbtn" style="color:black;">Info</a>
                     <div class="dropdown-content">
-                        <a href="{{ url('convening-member') }}">Convening Member</a>
-                        <a href="{{ url('developer') }}">Developer Info</a>
+                        <a href="{{ url('central-committee') }}">Central Committee</a>
 
-                        <a  data-bs-toggle="collapse" href="#collapseExampleq" role="button" aria-expanded="false" aria-controls="collapseExample">
-                           Thana Committee
-                          </a>
-                          <div class="collapse" id="collapseExampleq">
+                        <a data-bs-toggle="collapse" href="#collapseExampleq" role="button" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            Thana Committee
+                        </a>
+
+                        <div class="collapse" id="collapseExampleq">
                             <a href="{{ route('joypurhat') }}">Joypurhat Sadar</a>
-                        <a href="{{ route('panchbibi') }}">Panchbibi</a>
-                        <a href="{{ route('kalai') }}">Kalai</a>
-                        <a href="{{ route('khetlal') }}">Khetlal</a>
-                        <a href="{{ route('akkelpur') }}">Akkelpur</a>
+                            <a href="{{ route('panchbibi') }}">Panchbibi</a>
+                            <a href="{{ route('kalai') }}">Kalai</a>
+                            <a href="{{ route('khetlal') }}">Khetlal</a>
+                            <a href="{{ route('akkelpur') }}">Akkelpur</a>
                         </div>
+
+                        <a href="{{ url('developer') }}">Developer Info</a>
 
                     </div>
                 </div>
@@ -144,14 +149,14 @@
         display: inline-block;
         line-height: 1em;
     }
-    @media (max-width: 480px){
 
-        .header-middle form{
+    @media (max-width: 480px) {
+
+        .header-middle form {
             width: 95% !important;
             margin-left: 20px;
         }
     }
-
 </style>
 
 <script>

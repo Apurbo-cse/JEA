@@ -41,12 +41,12 @@
                         @foreach($posts as $post)
                         <div class="image-column col-lg-6 col-md-6 col-sm-12">
                             <div class="image">
-                                <a href="{{route('blog.details', $post->id)}}"><img src="{{asset($post->image)}}" alt="" /></a>
+                                <a href="{{route('blog.details', $post->slug)}}"><img src="{{asset($post->image)}}" alt="" /></a>
                             </div>
                         </div>
                         <div class="content-box col-lg-6 col-md-6 col-sm-12">
                             <div class="content-inner">
-                                <h3><a href="{{route('blog.details', $post->id)}}">{{$post->title}}</a></h3>
+                                <h3><a href="{{route('blog.details', $post->slug)}}">{{$post->title}}</a></h3>
                                 <ul class="post-meta">
                                     <li style=""><span class="icon fa fa-user"> </span>Admin</li>
                                     <li><span
@@ -56,7 +56,7 @@
                                     <li><span class="icon fa fa-comments"></span>0</li>
                                 </ul>
                                 <div class="text">{{Str::limit($post->description, 170)}}...
-                                    <i><a href="{{route('blog.details', $post->id)}}" class="read-more">See more</a></i>
+                                    <i><a href="{{route('blog.details', $post->slug)}}" class="read-more">See more</a></i>
                                 </div>
                             </div>
                         </div>

@@ -40,6 +40,7 @@
                             <th class="text-center" style="width: 10px">SL#</th>
                             <th class="text-center" >Title</th>
                             <th class="text-center" >Description</th>
+                            <th class="text-center" >Time</th>
                             <th class="text-center" >Status</th>
                             <th class="text-center" style="width: 40%">Image</th>
                             <th class="text-center" style="width: 12%">Actions</th>
@@ -49,9 +50,11 @@
                         <tbody>
                         @foreach($sliders as $slider)
                             <tr>
-                                <td>{{$slider->id}}</td>
+
+                                <td>{{$serial++ }}</td>
                                 <td>{{$slider->title}}</td>
                                 <td>{{$slider->description}}</td>
+                                <td>{{$slider->published_at->format('d M, Y')}}</td>
                                 <td>{{ucfirst($slider->status)}}</td>
                                 <td class="text-center"><img src="{{ asset($slider->image) }}"  width="20%" alt=""></td>
                                 <td class="d-flex">

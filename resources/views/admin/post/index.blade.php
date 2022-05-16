@@ -51,7 +51,7 @@
                         <tbody>
                         @foreach($posts as $post)
                             <tr>
-                                <td>{{$post->id }}</td>
+                                <td>{{$serial++ }}</td>
                                 <td>{{$post->title}}</td>
                                 <td>
                                     @foreach($post->tags as $tag)

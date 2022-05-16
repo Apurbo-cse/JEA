@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Gallery;
+use Carbon\Carbon;
+use Illuminate\Support\Str;
 
 class GalleryController extends Controller
 {
@@ -15,11 +17,12 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $galleries = Gallery::orderBy('created_at', 'DESC')->paginate(20);
-        return view('admin.gallery.index',compact('galleries'));
+        $data['galleries'] = Gallery::orderBy('created_at', 'DESC')->paginate(20);
+        $data['serial'] = 1;
+        return view('admin.gallery.index',$data);
     }
 
-    
+
 
     /**
      * Show the form for creating a new resource.
@@ -39,10 +42,11 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        $gallery =new Gallery();
-        $gallery->title = $request->input('title');
-        $gallery->description = $request->input('description');
-        $gallery->status = $request->input('status');
+        $data =new Gallery();
+        $data->title = $request->input('title');
+        $data->description = $request->input('description');
+        $data->status = $request->input('status');
+        $data['published_at'] = Carbon::now();
 
 
 
@@ -52,7 +56,7 @@ class GalleryController extends Controller
             $path ='images/gallery';
             $file_name = time() . $file->getClientOriginalName();
             $file->move($path, $file_name);
-            $gallery['image']= $path.'/'. $file_name;
+            $data['image']= $path.'/'. $file_name;
         }
 
         $request->validate([
@@ -62,7 +66,7 @@ class GalleryController extends Controller
             // 'image' => 'required|image|mimes:jpeg,png,jpg,JPEG,PNG,JPG|max:2048',
         ]);
 
-        $gallery->save();
+        $data->save();
         session()->flash('success', 'Gallery Created Successfully');
         return redirect()->route('admin.gallery.index');
     }
@@ -135,12 +139,12 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        $gallery = Gallery::findOrFail($id);
-        if($gallery){
-            if(file_exists(($gallery->image))){
-                unlink($gallery->image);
+        $data = Gallery::findOrFail($id);
+        if($data){
+            if(file_exists(($data->image))){
+                unlink($data->image);
             }
-            $gallery->delete();
+            $data->delete();
             session()->flash('success', 'Gallery deleted successfully');
             return back();
         }

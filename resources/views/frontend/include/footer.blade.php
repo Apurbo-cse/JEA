@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>Services</h3>
+                        <h3 class="text-light">Services</h3>
                         <ul>
                             <li><a href="#">Web design</a></li>
                             <li><a href="#">Development</a></li>
@@ -25,7 +25,7 @@
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>About</h3>
+                        <h3 class="text-light">About</h3>
                         <ul>
                             <li><a href="#">Company</a></li>
                             <li><a href="#">Team</a></li>
@@ -33,12 +33,12 @@
                         </ul>
                     </div>
                     <div class="col-md-6 item text text-light">
-                        <h3>Joypurhat Engineer's Association</h3>
-                        <p style="color: white">Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                        <h3 class="text-light">Joypurhat Engineer's Association</h3>
+                        <p style="color: white">Joypurhat Engineers Association - A single, uninterrupted and well-organized platform for all Joypurhat Engineers. Where socially and culturally responsible activities are conducted for the purpose of building a better Joypurhat. It is completely apolitical and non-profit. The activities are being carried out in a well-planned and well-organized manner, respecting the views of the competent admin panel and all the members. Self-Join the Joypurhat Engineers Association and add your familiar engineer siblings. We want your help and cooperation.</p>
                     </div>
                     <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
                 </div>
-                <p class="copyright text-light ">Joypurhat Engineer's Association © 2021 | <a href="https://www.facebook.com/apurbo.cse" class="text-warning text-bold">Apurbo Kumar</a></p>
+                <p class="copyright text-light ">Joypurhat Engineer's Association © 2022 | <a href="https://www.facebook.com/apurbo.cse" class="text-warning text-bold">Apurbo Kumar Anup</a></p>
             </div>
         </footer>
     </div>

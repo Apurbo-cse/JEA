@@ -45,11 +45,11 @@ Route::group(['prefix'=>'thana-committee'], function (){
 });
 
 
-Route::get('convening-member',[FrontendController::class, 'convening_member'])->name('convening_member');
+Route::get('central-committee',[FrontendController::class, 'convening_member'])->name('convening_member');
 
 // Blog View
     Route::get('blog',[BlogController::class, 'blog'])->name('blog');
-    Route::get('blog/details/{slug}',[BlogController::class, 'details'])->name('blog.details');
+    Route::get('blog/{slug}',[BlogController::class, 'details'])->name('blog.details');
 
 
 // Route::group(['prefix'=>'profile'], function (){

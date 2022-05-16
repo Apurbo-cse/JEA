@@ -83,13 +83,25 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label class="col-md-2 control-label">Post Image</label>
                             <div class="col-md-10">
-                                <input name="image" type="file" id="image" class="form-control">
+                                <input  type="file" name="image"  class="form-control">
                                 @error('image')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
+                            </div>
+                        </div> --}}
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Post Image</label>
+                            <div class="col-md-10">
+                                <input type="file" class="form-control" name="image" >
+                                @error('image')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                                {{-- @if($post->image != null)
+                                    <img src="{{ asset($post->image) }}" width="20%">
+                                @endif --}}
                             </div>
                         </div>
                         <div class="pull-right">

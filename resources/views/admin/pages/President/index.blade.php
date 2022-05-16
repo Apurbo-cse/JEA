@@ -46,6 +46,7 @@
                             <th class="text-center" >Degination</th>
                             <th class="text-center" >Job</th>
                             <th class="text-center" >Job Location</th>
+                            {{-- <th class="text-center" >Time</th> --}}
                             <th class="text-center" style="width: 40%">Image</th>
                             <th class="text-center" >Status</th>
                             <th class="text-center" style="width: 12%">Actions</th>
@@ -55,11 +56,13 @@
                         <tbody>
                         @foreach($p_members as $president)
                             <tr>
-                                <td>{{$president->id}}</td>
+                                <td>{{$serial++ }}</td>
                                 <td>{{$president->name}}</td>
                                 <td>{{$president->designation}}</td>
                                 <td>{{$president->job}}</td>
                                 <td>{{$president->job_location}}</td>
+                                {{-- <td>{{$president->published_at->format('d M, Y')}}</td> --}}
+
                                 <td class="text-center"><img src="{{ asset($president->image) }}"  width="20%" alt=""></td>
                                 <td>
                                     @if ($president->status == 0)
