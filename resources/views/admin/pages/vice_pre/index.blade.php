@@ -15,11 +15,11 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="page-header-title">
-                <h4 class="pull-left page-title">vice_pre</h4>
+                <h4 class="pull-left page-title">Vice President</h4>
                 <ol class="breadcrumb pull-right">
                     <li><a href="">Dashboard</a></li>
-                    <li><a href="{{route('admin.vice-president.create')}}">vice_pre Create</a></li>
-                    <li class="active">vice_pre List</li>
+                    <li><a href="{{route('admin.vice-president.create')}}">Vice President Create</a></li>
+                    <li class="active">Vice President List</li>
                 </ol>
                 <div class="clearfix"></div>
             </div>

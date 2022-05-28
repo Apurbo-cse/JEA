@@ -51,6 +51,9 @@ class PostController extends Controller
 
         ]);
 
+        // return $request->all();
+
+
 
         // if ($request->hasFile('image')){
         //     $file = $request->file('image');
@@ -60,19 +63,12 @@ class PostController extends Controller
         //     $data['image']= $path.'/'. $file_name;
 
         // }
-        
-        if($request->hasfile('image'))
-        {
-            $file = $request->file('image');
-            $path ='images/posts';
-            $file_name = time() . $file->getClientOriginalName();
-            $file->move($path, $file_name);
-            $data['image']= $path.'/'. $file_name;
-        }
 
 
+
+
+        $data = $request->except(['_token','image']);
         $data['title'] = $request->title;
-        $data = $request->except(['_token']);
         $data['slug'] = Str::slug($request->title, '-');
         $data['description'] = $request->description;
         $data['published_at'] = Carbon::now();
@@ -80,6 +76,16 @@ class PostController extends Controller
 
         if ($request->has('is_featured')){
             $data['is_featured'] = $request->is_featured;
+        }
+
+        if($request->hasFile('image'))
+        {
+
+            $file = $request->file('image');
+            $path ='images/posts';
+            $file_name = time() . $file->getClientOriginalName();
+            $file->move($path, $file_name);
+            $data['image']= $path.'/'. $file_name;
         }
 
         $post = Post::create($data);

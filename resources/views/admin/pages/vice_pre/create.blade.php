@@ -1,15 +1,15 @@
 @extends('admin.layouts.master')
-@section('title', 'Create New thana')
+@section('title', 'Create New Vice President')
 @section('content')
     <!-- Page-Title -->
     <div class="row">
         <div class="col-sm-12">
             <div class="page-header-title">
-                <h4 class="pull-left page-title">Create New thana</h4>
+                <h4 class="pull-left page-title">Create New Vice President</h4>
                 <ol class="breadcrumb pull-right">
                     <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-                    <li><a href="{{route('admin.vice-president.index')}}">thana List</a></li>
-                    <li class="active">Create thana</li>
+                    <li><a href="{{route('admin.vice-president.index')}}">Vice President List</a></li>
+                    <li class="active">Create Vice President</li>
                 </ol>
                 <div class="clearfix"></div>
             </div>
@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="panel panel-primary">
-                <div class="panel-heading"><h3 class="panel-title">thana Form</h3></div>
+                <div class="panel-heading"><h3 class="panel-title">Vice President Form</h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" action="{{route('admin.vice-president.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
