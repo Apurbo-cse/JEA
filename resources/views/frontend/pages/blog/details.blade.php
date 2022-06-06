@@ -35,7 +35,7 @@
                                         </ul>
                                         <div class="text-justify">
                                             <p>
-                                                {{$post->description}}
+                                                {!! $post->description !!}
                                             </p>
                                         </div>
 

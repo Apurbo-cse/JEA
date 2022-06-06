@@ -43,7 +43,7 @@
                     </div>
                     <div style="clear:both;">
                         <p class="text-muted m-b-30">
-                            {{$post->description}}
+                            {!! $post->description!!}
                         </p>
                     </div>
                     <div class="pull-right">

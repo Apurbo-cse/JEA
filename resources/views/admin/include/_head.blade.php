@@ -15,5 +15,9 @@
 <link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('admin/css/icons.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('admin/css/style.css')}}" rel="stylesheet" type="text/css">
+<!-- include summernote css/js -->
 
+
+
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 @yield('table_css')
