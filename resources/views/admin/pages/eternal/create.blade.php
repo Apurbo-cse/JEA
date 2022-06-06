@@ -46,7 +46,7 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label">Eternal</label>
                             <div class="col-md-10">
-                                <input name="eternal" class="form-control" rows="5" placeholder="Content">
+                                <textarea name="eternal" id="summernote" class="form-control" cols="30" rows="10"></textarea>
                                 @error('eternal')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror

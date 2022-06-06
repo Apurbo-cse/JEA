@@ -51,7 +51,7 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label">Description</label>
                             <div class="col-md-10">
-                                <textarea name="description" class="form-control" rows="5" placeholder="Content">{{ old('description') }}</textarea>
+                                <textarea name="description"  id="summernote" class="form-control" rows="5" placeholder="Content">{{ old('description') }}</textarea>
                                 @error('description')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -60,7 +60,7 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label">Source</label>
                             <div class="col-md-10">
-                                <textarea name="source" class="form-control" rows="5" placeholder="Content">{{ old('source') }}</textarea>
+                            <input value="{{old('source')}}" name="source" type="text" id="title" class="form-control" placeholder="source">
                                 @error('source')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror

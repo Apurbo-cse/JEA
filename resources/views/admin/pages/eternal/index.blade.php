@@ -57,7 +57,7 @@
                                 <td>{{$eternal->id}}</td>
                                 <td>{{$eternal->name}}</td>
                                 <td>{{$eternal->designation}}</td>
-                                <td>{{$eternal->eternal}}</td>
+                                <td>{!! $eternal->eternal !!}</td>
                                 <td class="text-center"><img src="{{ asset($eternal->image) }}"  width="20%" alt=""></td>
                                 <td>
                                     @if ($eternal->status == 0)
