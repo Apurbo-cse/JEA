@@ -36,6 +36,7 @@
                                         <div class="text-justify">
                                             <p>
                                                 {!! $post->description !!}
+
                                             </p>
                                         </div>
 

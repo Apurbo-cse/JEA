@@ -3413,9 +3413,25 @@ body.fixed-left .side-menu.left {
 body.fixed-left-void {
   min-height: 1024px;
 }
+
+
+.slimscrollleft{
+    max-width: 90vh !important;
+    position: relative;
+    overflow-y: scroll;
+    width: auto;
+    /* height: 859px; */
+}
+
+.slimscrollleft::-webkit-scrollbar {
+    width: 0px !important;
+    background: none;
+  }
 /*
 File: Responsive
 */
+
+
 @media only screen and (max-width: 6000px) and (min-width: 700px) {
   .wrapper.right-bar-enabled .right-bar {
     right: 0;
