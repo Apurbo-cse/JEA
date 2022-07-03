@@ -25,6 +25,12 @@
             </div>
         </div>
     </div>
+
+    <div class="row m-b-15">
+        <div class="col-sm-12">
+            <a class="btn btn-primary" href="{{route('admin.post.create')}}"><i class="fa fa-plus"></i> Create New Post</a>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary">

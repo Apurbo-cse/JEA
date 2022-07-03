@@ -36,11 +36,11 @@
             <!--Post-->
             <div class="news-block-four">
                 <div class="inner-box">
-                    <div class="row clearfix">
 
-                        @foreach($posts as $post)
+                    @foreach($posts as $post)
+                    <div class="row clearfix">
                         <div class="image-column col-lg-6 col-md-6 col-sm-12">
-                            <div class="image">
+                            <div class="">
                                 <a href="{{route('blog.details', $post->slug)}}"><img src="{{asset($post->image)}}" alt="" /></a>
                             </div>
                         </div>
@@ -55,14 +55,16 @@
                                     <li><span class="icon fa fa-eye"></span>{{$post->view_count }}</li>
                                     <li><span class="icon fa fa-comments"></span>0</li>
                                 </ul>
-                                <div class="text">{{Str::limit($post->description, 170)}}...
+                                {{-- <p> {!! Str::limit($post->description, 170)!!}...</p> --}}
+                                <div class="text">
+                                    {{Str::limit($post->description, 170)}}...
                                     <i><a href="{{route('blog.details', $post->slug)}}" class="read-more">See more</a></i>
                                 </div>
                             </div>
                         </div>
-                        @endforeach
-
                     </div>
+
+                    @endforeach
                 </div>
             </div>
             <!-- END Post-->

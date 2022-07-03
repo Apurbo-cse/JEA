@@ -54,13 +54,9 @@
                 </ul>
             </li>
 
-            <li class="has_sub">
-                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-sliders"></i> <span>Post</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
-                <ul class="list-unstyled">
-                    <li><a href="{{ route ('admin.post.index') }}">post List</a></li>
-                    <li><a href="{{ route('admin.post.create') }}">Create New post</a></li>
-                    {{-- {{ route('admin.category.index') }} --}}
-                </ul>
+            {{-- <li class=""><a href="{{route('admin.post.index')}}">Blog</a></li> --}}
+            <li>
+                <a href="{{ route ('admin.post.index') }}" class="waves-effect"><i class="mdi mdi-blogger"></i><span> Blog </span></a>
             </li>
 
 
